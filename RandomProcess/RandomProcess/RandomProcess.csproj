@@ -44,16 +44,70 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormDistributionLaw.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormDistributionLaw.Designer.cs">
+      <DependentUpon>FormDistributionLaw.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHypothesisTesting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHypothesisTesting.Designer.cs">
+      <DependentUpon>FormHypothesisTesting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormModelCorrelationFunction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModelCorrelationFunction.Designer.cs">
+      <DependentUpon>FormModelCorrelationFunction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormResultsTesting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormResultsTesting.Designer.cs">
+      <DependentUpon>FormResultsTesting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSimulationResultsCF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSimulationResultsCF.Designer.cs">
+      <DependentUpon>FormSimulationResultsCF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSimulationResultsDL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSimulationResultsDL.Designer.cs">
+      <DependentUpon>FormSimulationResultsDL.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="FormDistributionLaw.resx">
+      <DependentUpon>FormDistributionLaw.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHypothesisTesting.resx">
+      <DependentUpon>FormHypothesisTesting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModelCorrelationFunction.resx">
+      <DependentUpon>FormModelCorrelationFunction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormResultsTesting.resx">
+      <DependentUpon>FormResultsTesting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSimulationResultsCF.resx">
+      <DependentUpon>FormSimulationResultsCF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSimulationResultsDL.resx">
+      <DependentUpon>FormSimulationResultsDL.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
