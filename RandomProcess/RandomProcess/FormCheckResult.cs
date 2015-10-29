@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace RandomProcess
 {
-    public partial class FormDistributionLaw : Form
+    public partial class FormCheckResult : Form
     {
-        public FormDistributionLaw()
+        public FormCheckResult()
         {
             InitializeComponent();
         }
 
-        private void FormDistributionLaw_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void labelValueStatistics_Click(object sender, EventArgs e)
         {
 
         }

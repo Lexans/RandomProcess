@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RandomProcess
 {
-    public partial class FormModelCorrelationFunction : Form
+    public partial class FormRegen : Form
     {
-        public FormModelCorrelationFunction()
+        public FormRegen()
         {
             InitializeComponent();
         }

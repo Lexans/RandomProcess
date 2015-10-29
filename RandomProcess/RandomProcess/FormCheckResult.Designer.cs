@@ -1,6 +1,6 @@
 ﻿namespace RandomProcess
 {
-    partial class FormResultsTesting
+    partial class FormCheckResult
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,16 @@
         {
             this.buttonOK = new System.Windows.Forms.Button();
             this.labelValueStatistics = new System.Windows.Forms.Label();
-            this.labelCriterion = new System.Windows.Forms.Label();
             this.labelCriticalRegion = new System.Windows.Forms.Label();
             this.labelResult = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // buttonOK
             // 
-            this.buttonOK.Location = new System.Drawing.Point(184, 160);
+            this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.buttonOK.Location = new System.Drawing.Point(133, 155);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(83, 35);
             this.buttonOK.TabIndex = 0;
@@ -47,25 +49,17 @@
             // labelValueStatistics
             // 
             this.labelValueStatistics.AutoSize = true;
-            this.labelValueStatistics.Location = new System.Drawing.Point(8, 32);
+            this.labelValueStatistics.Location = new System.Drawing.Point(16, 24);
             this.labelValueStatistics.Name = "labelValueStatistics";
-            this.labelValueStatistics.Size = new System.Drawing.Size(151, 17);
+            this.labelValueStatistics.Size = new System.Drawing.Size(151, 34);
             this.labelValueStatistics.TabIndex = 1;
-            this.labelValueStatistics.Text = "Значение статистики";
-            // 
-            // labelCriterion
-            // 
-            this.labelCriterion.AutoSize = true;
-            this.labelCriterion.Location = new System.Drawing.Point(8, 69);
-            this.labelCriterion.Name = "labelCriterion";
-            this.labelCriterion.Size = new System.Drawing.Size(76, 17);
-            this.labelCriterion.TabIndex = 2;
-            this.labelCriterion.Text = "Критерий:";
+            this.labelValueStatistics.Text = "Значение статистики\r\nкритерия:";
+            this.labelValueStatistics.Click += new System.EventHandler(this.labelValueStatistics_Click);
             // 
             // labelCriticalRegion
             // 
             this.labelCriticalRegion.AutoSize = true;
-            this.labelCriticalRegion.Location = new System.Drawing.Point(8, 99);
+            this.labelCriticalRegion.Location = new System.Drawing.Point(16, 77);
             this.labelCriticalRegion.Name = "labelCriticalRegion";
             this.labelCriticalRegion.Size = new System.Drawing.Size(155, 17);
             this.labelCriticalRegion.TabIndex = 3;
@@ -74,23 +68,41 @@
             // labelResult
             // 
             this.labelResult.AutoSize = true;
-            this.labelResult.Location = new System.Drawing.Point(181, 127);
+            this.labelResult.Location = new System.Drawing.Point(130, 119);
             this.labelResult.Name = "labelResult";
             this.labelResult.Size = new System.Drawing.Size(86, 17);
             this.labelResult.TabIndex = 4;
             this.labelResult.Text = "\"Результат\"";
             // 
-            // FormResultsTesting
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(197, 36);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 5;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(197, 77);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 22);
+            this.textBox3.TabIndex = 7;
+            // 
+            // FormCheckResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(422, 212);
+            this.ClientSize = new System.Drawing.Size(333, 213);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.labelResult);
             this.Controls.Add(this.labelCriticalRegion);
-            this.Controls.Add(this.labelCriterion);
             this.Controls.Add(this.labelValueStatistics);
             this.Controls.Add(this.buttonOK);
-            this.Name = "FormResultsTesting";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "FormCheckResult";
             this.Text = "Результат проверки гипотезы";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -101,8 +113,9 @@
 
         private System.Windows.Forms.Button buttonOK;
         private System.Windows.Forms.Label labelValueStatistics;
-        private System.Windows.Forms.Label labelCriterion;
         private System.Windows.Forms.Label labelCriticalRegion;
         private System.Windows.Forms.Label labelResult;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox3;
     }
 }

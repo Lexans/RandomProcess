@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace RandomProcess
 {
-    public partial class FormResultsTesting : Form
+    public partial class FormModelingDistr : Form
     {
-        public FormResultsTesting()
+        public FormModelingDistr()
         {
             InitializeComponent();
+        }
+
+        private void listViewChar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

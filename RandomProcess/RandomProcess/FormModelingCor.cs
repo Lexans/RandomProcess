@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RandomProcess
 {
-    public partial class FormSimulationResultsCF : Form
+    public partial class FormModelingCor : Form
     {
-        public FormSimulationResultsCF()
+        public FormModelingCor()
         {
             InitializeComponent();
         }

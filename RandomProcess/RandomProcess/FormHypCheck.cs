@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace RandomProcess
 {
-    public partial class FormMain : Form
+    public partial class FormHypCheck : Form
     {
-        public FormMain()
+        public FormHypCheck()
         {
             InitializeComponent();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

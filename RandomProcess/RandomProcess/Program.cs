@@ -16,7 +16,7 @@ namespace RandomProcess
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMain());
+            Application.Run(new FormMethod());
         }
     }
 }
