@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RandomProcess", "RandomProcess\RandomProcess.csproj", "{B3AA0F6C-B023-4110-A82D-FE04C38BBEE1}"
 EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject1", "ModelingProject1\ModelingProject1.modelproj", "{F2F909C1-711E-44A9-9CFB-BE3AFD1AEFE1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{B3AA0F6C-B023-4110-A82D-FE04C38BBEE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3AA0F6C-B023-4110-A82D-FE04C38BBEE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3AA0F6C-B023-4110-A82D-FE04C38BBEE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2F909C1-711E-44A9-9CFB-BE3AFD1AEFE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2F909C1-711E-44A9-9CFB-BE3AFD1AEFE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2F909C1-711E-44A9-9CFB-BE3AFD1AEFE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2F909C1-711E-44A9-9CFB-BE3AFD1AEFE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

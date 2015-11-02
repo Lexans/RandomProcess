@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="e1cbaedc-038c-41fa-8487-d8c5676c69ff"
+  name="RandomProcess" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="efcfdd36-1fb3-4620-8304-b7dcf23ed293"
+        name="DistrLaw"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="882951fe-5833-44a3-b9f0-c3834850aa94"
+        name="CorrFunc"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="0383b937-848a-40ec-ae76-3dd9af994576"
+            name="Decaying"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9c86dfaf-2c12-4198-9b68-f75752f3d9bd"
+        name="RandomProcess"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <property
+            Id="39e0f5ef-10d2-4596-8798-e9a8af0cc357"
+            name="Sample"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="12c03b4f-5ca8-47e7-a66f-b713c4048c29"
+                LastKnownName="double[]"
+                LastKnownLocation="Package_2254.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="abea9dec-3c32-400b-979c-fe7bf50b1b42"
+            name="N"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <undefinedTypeMoniker
+                Id="8f61ba7f-b70b-4b20-8b45-b3587c5fc304"
+                LastKnownName="int"
+                LastKnownLocation="Package_2254.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="0486dccc-a817-46e2-aa07-7998446b53d4"
+            name="RandomProcess"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="6964af52-495b-45f1-b0d0-e9fe686cda79"
+            name="Generate"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="12c03b4f-5ca8-47e7-a66f-b713c4048c29"
+        name="double[]" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="b57769db-fbe8-4c43-aa8e-37c474d53dc3"
+        name="Method"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="8f61ba7f-b70b-4b20-8b45-b3587c5fc304"
+        name="int" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="9b30f3cb-6705-4bda-93ba-64f315e2c998"
+        name="DistLawType"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="c264dbd9-71ec-4ae8-bb7a-711413ea86bc"
+            name="Normal" />
+          <enumerationLiteral
+            Id="2a92d17b-d700-4864-90da-01490f31c4ca"
+            name="Expon" />
+          <enumerationLiteral
+            Id="0f4bff49-094a-42ab-9453-956497735ff6"
+            name="Uniform" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="9dcb5cf5-d1b9-4bf2-8896-d4212267b43b"
+        name="CorrFuncType"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="c6f8941b-61b4-42e7-bf0d-6270a54f263a"
+            name="Decaying" />
+          <enumerationLiteral
+            Id="08d0e670-ee2a-4a8b-b321-6e61ddb962ad"
+            name="Oscillatory" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
