@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="b7d224b9-ee1b-4932-8d3c-a9dc2a20ba33"
   name="ModelingProject1" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -23,6 +23,61 @@
         Id="e1cbaedc-038c-41fa-8487-d8c5676c69ff"
         LastKnownName="RandomProcess"
         LastKnownLocation="Package_2254.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="eb2cf229-c51e-4b8f-9a57-42ffafd47bc4"
+        name="ModelingProject1::RoadRingSim::Core::Domains::DistrubutionLaws" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="c8b97e83-e757-4dd4-a953-786fbae8e662"
+        name="ModelingProject1::System::Double" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="8222d6c9-3257-4c00-9d7b-8793a7cb09ec"
+        name="ModelingProject1::System::Random" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="34ca4c37-88e2-4744-9d91-b1bae643b591"
+        name="ModelingProject1::System::UInt32" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="4fbc2775-2a10-4ccb-8c22-49c912ef1766"
+        name="ModelingProject1::ModelingApplication::NormalDistr" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="a659a103-84e8-4e6a-b9f0-f1f4592058a4"
+        name="Random" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="0b1296d3-1f78-425a-b275-db71fb7be2b9"
+        name="NoramalDistr" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="fbb8fda3-88b3-4dfc-9548-20a5a12f3fb0"
+        name="double" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="105aec71-2388-4452-8b67-2341b7b2cc01"
+        name="Double" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="7c775094-c0f6-4ff4-909c-d2c3febf16e0"
+        name="System.Drawing.Graphics" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="7803594e-2a8a-474d-a6c6-1b67bf964340"
+        name="int[]" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
