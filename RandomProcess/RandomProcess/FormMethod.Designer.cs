@@ -122,6 +122,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelVolumeArray);
             this.Controls.Add(this.buttonNext);
+            this.HelpButton = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormMethod";
