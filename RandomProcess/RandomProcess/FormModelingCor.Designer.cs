@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem("MX");
-            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem("DX");
-            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem("Ka");
-            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem("Kε");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("MX");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("DX");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Ka");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Kε");
             this.buttonSaveArray = new System.Windows.Forms.Button();
             this.buttonAgo = new System.Windows.Forms.Button();
             this.buttonComplete = new System.Windows.Forms.Button();
@@ -44,6 +44,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.buttonNewArray = new System.Windows.Forms.Button();
+            this.radioButtonCorFunc = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -107,10 +108,10 @@
             this.columnHeaderValue});
             this.listViewChar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewChar.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem13,
-            listViewItem14,
-            listViewItem15,
-            listViewItem16});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4});
             this.listViewChar.Location = new System.Drawing.Point(3, 18);
             this.listViewChar.Name = "listViewChar";
             this.listViewChar.Size = new System.Drawing.Size(380, 171);
@@ -137,6 +138,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.radioButtonCorFunc);
             this.groupBox1.Controls.Add(this.radioButtonDistrFunction);
             this.groupBox1.Controls.Add(this.panelCanvas);
             this.groupBox1.Controls.Add(this.radioButtonDensity);
@@ -167,6 +169,16 @@
             this.buttonNewArray.Text = "Новая выборка";
             this.buttonNewArray.UseVisualStyleBackColor = true;
             // 
+            // radioButtonCorFunc
+            // 
+            this.radioButtonCorFunc.AutoSize = true;
+            this.radioButtonCorFunc.Location = new System.Drawing.Point(24, 355);
+            this.radioButtonCorFunc.Name = "radioButtonCorFunc";
+            this.radioButtonCorFunc.Size = new System.Drawing.Size(203, 21);
+            this.radioButtonCorFunc.TabIndex = 9;
+            this.radioButtonCorFunc.Text = "Корреляционная функция";
+            this.radioButtonCorFunc.UseVisualStyleBackColor = true;
+            // 
             // FormModelingCor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -179,7 +191,9 @@
             this.Controls.Add(this.buttonAgo);
             this.Controls.Add(this.buttonSaveArray);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.HelpButton = true;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormModelingCor";
             this.Text = "Результаты моделирования";
             this.groupBox1.ResumeLayout(false);
@@ -203,5 +217,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button buttonNewArray;
+        private System.Windows.Forms.RadioButton radioButtonCorFunc;
     }
 }

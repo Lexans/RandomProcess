@@ -133,6 +133,7 @@
             this.Controls.Add(this.labelModelCorrelationFunction);
             this.Controls.Add(this.comboBoxCorFunc);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.HelpButton = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormCorFunc";

@@ -136,6 +136,7 @@
             this.Controls.Add(this.comboBoxChoiceLawDistribution);
             this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.labelDistributionLaw);
+            this.HelpButton = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormDistrLaw";

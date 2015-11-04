@@ -44,7 +44,7 @@
                 </property>
               </ownedAttributesInternal>
               <ownedOperationsInternal>
-                <operation Id="e8649fa5-93ae-4002-bbda-9fb4345a9217" name="RandomProcess" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="e8649fa5-93ae-4002-bbda-9fb4345a9217" name="RandomProcess" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <elementDefinition Id="0486dccc-a817-46e2-aa07-7998446b53d4" />
                 </operation>
                 <operation Id="87eb7f8c-807c-47a9-a810-edf7c26c0a59" name="Generate" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
@@ -223,7 +223,7 @@
                     <referencedTypeMoniker Id="970e6999-a43c-462c-8db4-f209f84c7504" LastKnownName="System.Drawing.Graphics" />
                   </type_NamedElement>
                 </property>
-                <property Id="aac3a235-6c7c-44d0-ba3b-e00ef9e14226" name="Bounds" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <property Id="aac3a235-6c7c-44d0-ba3b-e00ef9e14226" name="Bounds" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <appliedStereotypesInternal>
                     <stereotypeInstance Id="03ea0ea0-d808-4d01-bf26-106ba5241332" name="property" profile="CSharpProfile">
                       <elementDefinition Id="400fa4e1-2a9c-4299-8185-12c771d4b131" />
@@ -278,7 +278,7 @@
                     <referencedTypeMoniker Id="1cdec899-f4e4-4c11-9a38-759140b58b57" LastKnownName="double[]" />
                   </type_NamedElement>
                 </property>
-                <property Id="25e2574d-6eca-4a91-be1d-6b6eec29e19a" name="Freqs" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <property Id="25e2574d-6eca-4a91-be1d-6b6eec29e19a" name="Freqs" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <description>частоты попадания в интервалы</description>
                   <appliedStereotypesInternal>
                     <stereotypeInstance Id="d5c6f3e2-e5ce-450f-baaf-af06931a0ee8" name="property" profile="CSharpProfile">
@@ -383,7 +383,7 @@
                   </appliedStereotypesInternal>
                   <elementDefinition Id="db7583d9-6ac3-40cb-8482-d44b05b6bd28" />
                 </operation>
-                <operation Id="c40c2bf8-be18-422f-8c9a-4ec946381270" name="DrawFunc" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                <operation Id="c40c2bf8-be18-422f-8c9a-4ec946381270" name="DrawFunc" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
                   <description>отрисовка произвольного графика функции</description>
                   <appliedStereotypesInternal>
                     <stereotypeInstance Id="a5e4d2fd-87f8-40a9-ae78-49511446a18a" name="method" profile="CSharpProfile">
@@ -435,6 +435,30 @@
                         <elementDefinition Id="6541156b-7b3b-4cbe-bade-5cb0571ea956" />
                         <type_NamedElement>
                           <referencedTypeMoniker Id="dff1c695-8bd7-43a1-bcb1-23c67694d357" LastKnownName="FuncOfX" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="85045852-d617-4ac6-ba94-a405c966b4c8" name="scaleX" direction="In">
+                        <elementDefinition Id="313da760-e67a-4e8c-9cc4-349ca45f12fd" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="209384dc-76d1-4e38-8e12-9bcdb824944f" LastKnownName="double" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="41ac0d79-8475-4b87-bc42-a0ec48ee8b4b" name="scaleY" direction="In">
+                        <elementDefinition Id="946aa1e5-3ac3-4d5f-88ca-12521d28ae37" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="209384dc-76d1-4e38-8e12-9bcdb824944f" LastKnownName="double" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="ab957e3e-239c-4e39-bf24-deb8b9e3b2a3" name="leftX" direction="In">
+                        <elementDefinition Id="70a8b44c-a0ef-4c25-82c5-1c7dcaf2051a" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="209384dc-76d1-4e38-8e12-9bcdb824944f" LastKnownName="double" />
                         </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>
@@ -556,6 +580,9 @@
                       </parameter>
                     </operationHasOwnedParameters>
                   </ownedParameters>
+                </operation>
+                <operation Id="b0174660-fc3c-4e68-aa7f-67583161ad79" name="NumericCharacteristic" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="3d9bf851-4204-47aa-967b-3ff8d5f0a78b" />
                 </operation>
               </ownedOperationsInternal>
             </class>
@@ -1233,13 +1260,13 @@
                 </interfaceRealization>
               </suppliersInternal>
               <ownedAttributesInternal>
-                <property Id="86fffe74-751c-4875-b225-16c4a1ee6686" name="A" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <property Id="86fffe74-751c-4875-b225-16c4a1ee6686" name="Left" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="98a2bf0a-7e98-4fc5-9f30-e4b39b547dfa" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="4a4ff6ca-d6e5-4cd5-9d3c-e374aa526362" LastKnownName="double" />
                   </type_NamedElement>
                 </property>
-                <property Id="3370207a-7a0b-4bf7-a623-0762d3179506" name="B" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                <property Id="3370207a-7a0b-4bf7-a623-0762d3179506" name="Right" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
                   <elementDefinition Id="722d6c7c-16bf-484c-999f-d1e705eaee76" />
                   <type_NamedElement>
                     <referencedTypeMoniker Id="15b6467a-f283-4d93-ba49-ebc110407014" LastKnownName="double" />
@@ -1649,6 +1676,19 @@
                     </operationHasOwnedParameters>
                   </ownedParameters>
                 </operation>
+                <operation Id="f774d7d7-170b-4e87-ab34-950ca3600017" name="PirsonCrit" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="9efff30f-c08b-41ae-a8ab-b9d08268615b" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="ac355612-45c4-4a23-af63-2c7d716db635" name="Src" direction="In">
+                        <elementDefinition Id="1adf0738-56cd-48cd-ac7f-902a8c3a08bc" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="d311e41f-b022-4bc3-a4bb-126f9a37022f" LastKnownName="ProbCurves" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
               </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
@@ -1712,6 +1752,19 @@
                         <elementDefinition Id="6e3550d7-2dcb-43f2-83ae-4daff8d12333" />
                         <type_NamedElement>
                           <referencedTypeMoniker Id="3f2df1c8-0048-4c07-8efd-7cbc807ee797" LastKnownName="double" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="95c3972a-b93b-4a78-810e-7b3039831c3c" name="KolmogorovCrit" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="26fc5288-466c-4285-af91-5d192aa38b7b" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="a689ae2a-806b-4a83-975f-bd661ccf987f" name="Src" direction="In" isUnique="false">
+                        <elementDefinition Id="c5de01a1-e454-4cdc-ac0e-6cdc722d5e31" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="d311e41f-b022-4bc3-a4bb-126f9a37022f" LastKnownName="ProbCurves" />
                         </type_NamedElement>
                       </parameter>
                     </operationHasOwnedParameters>

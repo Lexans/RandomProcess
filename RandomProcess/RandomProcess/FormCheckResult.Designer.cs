@@ -76,23 +76,25 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(197, 36);
+            this.textBox1.Location = new System.Drawing.Point(197, 24);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(131, 22);
             this.textBox1.TabIndex = 5;
             // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(197, 77);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(131, 22);
             this.textBox3.TabIndex = 7;
             // 
             // FormCheckResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(333, 213);
+            this.ClientSize = new System.Drawing.Size(340, 212);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.labelResult);
@@ -100,6 +102,7 @@
             this.Controls.Add(this.labelValueStatistics);
             this.Controls.Add(this.buttonOK);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.HelpButton = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormCheckResult";

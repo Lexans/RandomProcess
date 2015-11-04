@@ -296,6 +296,7 @@
           <operation
             Id="0486dccc-a817-46e2-aa07-7998446b53d4"
             name="RandomProcess"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -2687,7 +2688,6 @@
           <property
             Id="c3833392-3505-4e34-b938-1a43fda3caef"
             name="Bounds"
-            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -2763,7 +2763,6 @@
           <property
             Id="3b4925fe-f8ff-43b1-a69c-0d3cb46acdf0"
             name="Freqs"
-            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -2901,6 +2900,7 @@
           <operation
             Id="3250351c-01b6-41f8-bcbe-3572a17d4521"
             name="DrawFunc"
+            visibility="Private"
             isLeaf="false"
             isStatic="false"
             isAbstract="false"
@@ -2968,6 +2968,45 @@
                       Id="928250b6-d7d3-431b-a4cc-f63af3543833"
                       LastKnownName="FuncOfX"
                       LastKnownLocation="Package_2254.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="313da760-e67a-4e8c-9cc4-349ca45f12fd"
+                  name="scaleX"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="fbb8fda3-88b3-4dfc-9548-20a5a12f3fb0"
+                      LastKnownName="double"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="946aa1e5-3ac3-4d5f-88ca-12521d28ae37"
+                  name="scaleY"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="fbb8fda3-88b3-4dfc-9548-20a5a12f3fb0"
+                      LastKnownName="double"
+                      LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="70a8b44c-a0ef-4c25-82c5-1c7dcaf2051a"
+                  name="leftX"
+                  direction="In">
+                  <type_NamedElement>
+                    <undefinedTypeMoniker
+                      Id="fbb8fda3-88b3-4dfc-9548-20a5a12f3fb0"
+                      LastKnownName="double"
+                      LastKnownLocation="ModelingProject1.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>
@@ -3341,6 +3380,14 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="3d9bf851-4204-47aa-967b-3ff8d5f0a78b"
+            name="NumericCharacteristic"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -4469,7 +4516,7 @@
         <ownedAttributesInternal>
           <property
             Id="98a2bf0a-7e98-4fc5-9f30-e4b39b547dfa"
-            name="A"
+            name="Left"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -4487,7 +4534,7 @@
           </property>
           <property
             Id="722d6c7c-16bf-484c-999f-d1e705eaee76"
-            name="B"
+            name="Right"
             isLeaf="false"
             isStatic="false"
             isReadOnly="false"
@@ -5262,6 +5309,30 @@
               </operationHasOwnedParameters>
             </ownedParameters>
           </operation>
+          <operation
+            Id="9efff30f-c08b-41ae-a8ab-b9d08268615b"
+            name="PirsonCrit"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="1adf0738-56cd-48cd-ac7f-902a8c3a08bc"
+                  name="Src"
+                  direction="In">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="758feb09-e2a4-4c52-8dbc-5b08f068167d"
+                      LastKnownName="ProbCurves"
+                      LastKnownLocation="Package_2254.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
         </ownedOperationsInternal>
       </class>
     </packageHasNamedElement>
@@ -5374,6 +5445,31 @@
                       Id="fbb8fda3-88b3-4dfc-9548-20a5a12f3fb0"
                       LastKnownName="double"
                       LastKnownLocation="ModelingProject1.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="26fc5288-466c-4285-af91-5d192aa38b7b"
+            name="KolmogorovCrit"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="c5de01a1-e454-4cdc-ac0e-6cdc722d5e31"
+                  name="Src"
+                  direction="In"
+                  isUnique="false">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="758feb09-e2a4-4c52-8dbc-5b08f068167d"
+                      LastKnownName="ProbCurves"
+                      LastKnownLocation="Package_2254.uml" />
                   </type_NamedElement>
                 </parameter>
               </operationHasOwnedParameters>

@@ -118,6 +118,7 @@
             this.Controls.Add(this.labelLevelImportance);
             this.Controls.Add(this.buttonCheck);
             this.Controls.Add(this.buttonPrev);
+            this.HelpButton = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormHypCheck";

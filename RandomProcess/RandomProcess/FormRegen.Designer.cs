@@ -47,7 +47,7 @@
             // buttonOk
             // 
             this.buttonOk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonOk.Location = new System.Drawing.Point(121, 80);
+            this.buttonOk.Location = new System.Drawing.Point(154, 94);
             this.buttonOk.Name = "buttonOk";
             this.buttonOk.Size = new System.Drawing.Size(93, 23);
             this.buttonOk.TabIndex = 1;
@@ -79,26 +79,27 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(229, 80);
+            this.button1.Location = new System.Drawing.Point(264, 94);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(90, 23);
             this.button1.TabIndex = 3;
             this.button1.Text = "Отмена";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // FormRegenArray
+            // FormRegen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(321, 115);
+            this.ClientSize = new System.Drawing.Size(354, 129);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.numericUpDownNewValue);
             this.Controls.Add(this.buttonOk);
             this.Controls.Add(this.labelNewN);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.HelpButton = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FormRegenArray";
+            this.Name = "FormRegen";
             this.Text = "Генерация новой выборки";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNewValue)).EndInit();
             this.ResumeLayout(false);

@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("MX");
-            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("DX");
-            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("Ka");
-            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem("Kε");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("MX");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("DX");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Ka");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Kε");
             this.buttonHypothesisTesting = new System.Windows.Forms.Button();
             this.buttonComplete = new System.Windows.Forms.Button();
             this.buttonAgo = new System.Windows.Forms.Button();
@@ -41,12 +41,12 @@
             this.listViewChar = new System.Windows.Forms.ListView();
             this.columnHeaderChar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderStatValue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeaderAnalyt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panelCanvas = new System.Windows.Forms.Panel();
             this.buttonNewArray = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.columnHeaderAnalyt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -119,10 +119,10 @@
             this.columnHeaderAnalyt});
             this.listViewChar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewChar.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem9,
-            listViewItem10,
-            listViewItem11,
-            listViewItem12});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4});
             this.listViewChar.Location = new System.Drawing.Point(3, 18);
             this.listViewChar.Name = "listViewChar";
             this.listViewChar.Size = new System.Drawing.Size(476, 156);
@@ -140,6 +140,11 @@
             // 
             this.columnHeaderStatValue.Text = "Статистические";
             this.columnHeaderStatValue.Width = 174;
+            // 
+            // columnHeaderAnalyt
+            // 
+            this.columnHeaderAnalyt.Text = "Аналитические";
+            this.columnHeaderAnalyt.Width = 173;
             // 
             // panelCanvas
             // 
@@ -190,11 +195,6 @@
             this.radioButton1.Text = "Корреляционная функция";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // columnHeaderAnalyt
-            // 
-            this.columnHeaderAnalyt.Text = "Аналитические";
-            this.columnHeaderAnalyt.Width = 173;
-            // 
             // FormModelingDistr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -208,7 +208,9 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonHypothesisTesting);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.HelpButton = true;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormModelingDistr";
             this.Text = "Результаты моделирования";
             this.groupBox2.ResumeLayout(false);
