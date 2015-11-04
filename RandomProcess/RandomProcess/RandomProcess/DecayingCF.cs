@@ -9,18 +9,33 @@ namespace RandomProcess
 	{
 		public double A;
 
+        public static Random rand = new Random();
+
+        private double yn_1;
+
 		public double CorrFunc(double tau)
 		{
-			throw new System.NotImplementedException();
-		}
+            return Math.Exp(-1 * A * Math.Abs(tau));
+        }
 
 		public double GetSample()
 		{
-			throw new System.NotImplementedException();
-		}
+            double dt = 0.4/A;
+            double y = A * dt;
+            double p = Math.Exp(-1 * y);
+            double a0 = Math.Sqrt(1-Math.Pow(p, 2));
+            double b1 = p;
+
+            double yn = a0 * rand.NextDouble()+b1*yn_1;
+            yn_1 = yn;
+
+            return yn;
+        }
 
 		public DecayingCF(double A)
 		{
+            this.A = A;
+            yn_1 = 0;
 		}
 
 	}

@@ -16,18 +16,28 @@ namespace RandomProcess
 
 		public IModeling Stochastic;
 
-		/// <summary>
-		/// свойство получение объекта синглтон класса
-		/// </summary>
-		public static RandomProcess Inst;
 
-		/// <summary>
-		/// ссылка на объект синглтон класса
-		/// </summary>
-		private static RandomProcess inst;
+        /// <summary>
+        /// объект-одиночка
+        /// </summary>
+        private static RandomProcess inst = null;
+        public static RandomProcess Inst
+        {
+            get
+            {
+                if (inst == null)
+                {
+                    inst = new RandomProcess();
+                }
+                return inst;
+            }
+        }
+
+
 
 		private RandomProcess()
 		{
+
 		}
 
 		/// <summary>
@@ -35,7 +45,12 @@ namespace RandomProcess
 		/// </summary>
 		public void Generate()
 		{
-			throw new System.NotImplementedException();
+            Sample = new double[N];
+ 
+            for (int i = 0; i < N; i++)
+            {
+                Sample[i] = Stochastic.GetSample();
+            }
 		}
 
 		public void ToFile(string FileName)
@@ -48,7 +63,7 @@ namespace RandomProcess
 		/// </summary>
 		public void Reset()
 		{
-			throw new System.NotImplementedException();
+            inst = null;
 		}
 
 	}

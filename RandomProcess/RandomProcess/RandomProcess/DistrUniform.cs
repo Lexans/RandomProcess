@@ -7,47 +7,60 @@ namespace RandomProcess
 {
 	public sealed class DistrUniform : IDistrLaw
 	{
-		public double Left;
+		public double A;
 
-		public double Right;
+		public double B;
+
+        public static Random rand = new Random();
 
 		public double CalcDx()
 		{
-			throw new System.NotImplementedException();
+            return Math.Pow((B - A), 2) / 12;
 		}
 
 		public double CalcKa()
 		{
-			throw new System.NotImplementedException();
-		}
+            return 0;
+        }
 
 		public double CalcKe()
 		{
-			throw new System.NotImplementedException();
+            return -1.2;
 		}
 
 		public double CalcMx()
 		{
-			throw new System.NotImplementedException();
-		}
+            return (A + B) / 2;
+        }
 
 		public double DensityFunc(double x)
 		{
-			throw new System.NotImplementedException();
+            if (x >= A && x <= B)
+                return 1 / (B - A);
+            else
+                return 0;
 		}
 
 		public double DistributionFunc(double x)
 		{
-			throw new System.NotImplementedException();
-		}
+            if (x < A)
+                return 0;
+            else if (x >= B)
+                return 1;
+            else
+                return (x - A) / (B - A);
+
+        }
 
 		public double GetSample()
 		{
-			throw new System.NotImplementedException();
+            return A + (B - A) * rand.NextDouble();
 		}
 
 		public DistrUniform(double A, double B)
 		{
+            this.A = A;
+            this.B = B;
 		}
 
 	}

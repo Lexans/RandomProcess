@@ -18,7 +18,6 @@ namespace RandomProcess
 		double DensityFunc(double x);
 
 		double DistributionFunc(double x);
-
 	}
 }
 

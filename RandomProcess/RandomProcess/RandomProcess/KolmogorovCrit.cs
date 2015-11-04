@@ -7,6 +7,10 @@ namespace RandomProcess
 {
 	public sealed class KolmogorovCrit : ICriterion
 	{
+        public double SignificanceLevel;
+
+        public ProbCurves Source;
+
 		public bool CheckCriterion(out double CritPoint, out double Statistic)
 		{
 			throw new System.NotImplementedException();

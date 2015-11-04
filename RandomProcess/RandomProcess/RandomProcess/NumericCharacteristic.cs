@@ -7,15 +7,22 @@ namespace RandomProcess
 {
 	public sealed class NumericCharacteristic
 	{
+        double[] X;
+        int N;
+        
+
 		public double CalcMx()
 		{
-			throw new System.NotImplementedException();
-		}
+            return X.Sum()/N;
+        }
 
 		public double CalcDX()
 		{
-			throw new System.NotImplementedException();
-		}
+            double MX = CalcMx();
+
+            return
+                1 / (N - 1) * X.Sum((xi) => Math.Pow((xi - MX), 2));
+        }
 
 		public double CalcKe()
 		{
@@ -29,6 +36,8 @@ namespace RandomProcess
 
 		public NumericCharacteristic()
 		{
+            X = RandomProcess.Inst.Sample;
+            N = RandomProcess.Inst.N;
 		}
 
 	}

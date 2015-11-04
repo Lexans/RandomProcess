@@ -11,7 +11,6 @@ namespace RandomProcess
 		/// получение случайной реализации
 		/// </summary>
 		double GetSample();
-
 	}
 }
 

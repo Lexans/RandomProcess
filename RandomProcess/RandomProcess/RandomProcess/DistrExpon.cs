@@ -9,6 +9,8 @@ namespace RandomProcess
 	{
 		public double Intensity;
 
+        public static Random rand = new Random();
+
 		public double CalcDx()
 		{
 			throw new System.NotImplementedException();

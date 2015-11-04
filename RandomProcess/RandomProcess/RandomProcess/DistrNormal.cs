@@ -11,6 +11,8 @@ namespace RandomProcess
 
 		public double Mx;
 
+        public static Random rand = new Random();
+
 		public double CalcDx()
 		{
 			throw new System.NotImplementedException();
