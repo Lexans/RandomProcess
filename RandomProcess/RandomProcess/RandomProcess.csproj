@@ -94,6 +94,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomProcess\DecayingCF.cs" />
+    <Compile Include="RandomProcess\DistrExpon.cs" />
+    <Compile Include="RandomProcess\DistrNormal.cs" />
+    <Compile Include="RandomProcess\DistrUniform.cs" />
+    <Compile Include="RandomProcess\ICorrFunc.cs" />
+    <Compile Include="RandomProcess\ICriterion.cs" />
+    <Compile Include="RandomProcess\IDistrLaw.cs" />
+    <Compile Include="RandomProcess\IModeling.cs" />
+    <Compile Include="RandomProcess\KolmogorovCrit.cs" />
+    <Compile Include="RandomProcess\NumericCharacteristic.cs" />
+    <Compile Include="RandomProcess\OscillatoryCF.cs" />
+    <Compile Include="RandomProcess\PirsonCrit.cs" />
+    <Compile Include="RandomProcess\ProbCurves.cs" />
+    <Compile Include="RandomProcess\RandomProcess.cs" />
     <EmbeddedResource Include="FormDistrLaw.resx">
       <DependentUpon>FormDistrLaw.cs</DependentUpon>
     </EmbeddedResource>
