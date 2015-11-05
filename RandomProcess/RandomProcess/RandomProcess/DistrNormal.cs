@@ -35,7 +35,10 @@ namespace RandomProcess
 
 		public double DensityFunc(double x)
 		{
-            return (1 / (Math.Sqrt(2 * Math.PI) * Dx)) * Math.Exp((-Math.Pow(x-Mx,2))/2*Math.Pow(Dx,2));
+            double res =  Math.Exp(-1 * Math.Pow(x - Mx, 2) / (2 * Dx))
+                 / Math.Sqrt(2 * Math.PI * Dx);
+
+            return res;
 		}
 
 		public double DistributionFunc(double x)

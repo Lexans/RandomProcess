@@ -29,14 +29,20 @@ namespace RandomProcess
             double MX = CalcMx();
             double DX = CalcDx();
 
-            return ( 1d / (N - 1) * X.Sum((xi) => Math.Pow((xi - MX), 4)))/(Math.Pow(DX ,2)) - 3 ;
+            if (DX == 0)
+                return 0;
+            else
+            return (1d / (N - 1) * X.Sum((xi) => Math.Pow((xi - MX), 4))) / (Math.Pow(DX, 2)) - 3;
 		}
 
 		public double CalcKa()
 		{
             double MX = CalcMx();
             double DX = CalcDx();
-            
+
+            if (DX == 0)
+                return 0;
+            else
             return 
                 (1d / N  * X.Sum((xi) => Math.Pow((xi - MX), 3)))/(Math.Pow(DX, 3d/2));
 		}

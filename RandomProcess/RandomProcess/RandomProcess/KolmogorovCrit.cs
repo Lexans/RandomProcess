@@ -13,21 +13,37 @@ namespace RandomProcess
 
 		public bool CheckCriterion(out double CritPoint, out double Statistic)
 		{
-			throw new System.NotImplementedException();
+            Statistic = CalcStatistic();
+            CritPoint = CalcCriticalPoint();
+
+            return (Statistic < CritPoint);
 		}
 
 		private double CalcCriticalPoint()
 		{
-			throw new System.NotImplementedException();
-		}
+            int N = RandomProcess.Inst.N;
+
+            Dictionary<double, double> quantTable = new Dictionary<double,double>
+            {
+                {0.1, 1.22},
+                {0.05, 1.36},
+                {0.02, 1.52},
+                {0.01, 1.63},
+                {0.001, 1.95}
+            };
+
+            return quantTable[SignificanceLevel] / Math.Sqrt(N);
+        }
 
 		private double CalcStatistic()
 		{
-			throw new System.NotImplementedException();
-		}
+        	throw new System.NotImplementedException();
+        }
 
 		public KolmogorovCrit(ProbCurves Src)
 		{
+            SignificanceLevel = 0.05;
+            this.Source = Src;
 		}
 
 	}
