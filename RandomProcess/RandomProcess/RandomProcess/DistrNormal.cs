@@ -43,11 +43,6 @@ namespace RandomProcess
             throw new System.NotImplementedException();
 		}
 
-		public Double GetSample()
-		{
-            throw new System.NotImplementedException();
-		}
-
 		public DistrNormal(double Dx, double Mx)
 		{
             this.Dx = Dx;
