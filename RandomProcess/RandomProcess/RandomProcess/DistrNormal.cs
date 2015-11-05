@@ -45,7 +45,6 @@ namespace RandomProcess
             return Fx;
 		}
 
-
 		/// <summary>
 		/// интегрирование функции e^-((x-a)^2)/(2*dx) от xMin до x
 		/// </summary>
