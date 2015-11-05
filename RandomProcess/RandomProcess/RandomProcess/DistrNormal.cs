@@ -54,11 +54,6 @@ namespace RandomProcess
             this.Mx = Mx;
 		}
 
-		public double GetSample()
-		{
-            throw new System.NotImplementedException();
-		}
-
 	}
 }
 

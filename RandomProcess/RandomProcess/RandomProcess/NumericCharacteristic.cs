@@ -16,29 +16,29 @@ namespace RandomProcess
             return X.Sum()/N;
         }
 
-		public double CalcDX()
+		public double CalcDx()
 		{
             double MX = CalcMx();
 
             return
-                1 / (N - 1) * X.Sum((xi) => Math.Pow((xi - MX), 2));
+                1d / (N - 1) * X.Sum((xi) => Math.Pow((xi - MX), 2));
         }
 
 		public double CalcKe()
 		{
             double MX = CalcMx();
-            double DX = CalcDX();
+            double DX = CalcDx();
 
-            return ( 1 / (N - 1) * X.Sum((xi) => Math.Pow((xi - MX), 4)))/(Math.Pow(DX ,2)) ;
+            return ( 1d / (N - 1) * X.Sum((xi) => Math.Pow((xi - MX), 4)))/(Math.Pow(DX ,2)) - 3 ;
 		}
 
 		public double CalcKa()
 		{
             double MX = CalcMx();
-            double DX = CalcDX();
+            double DX = CalcDx();
             
             return 
-                (1 / N  * X.Sum((xi) => Math.Pow((xi - MX), 3)))/(Math.Pow(Math.Sqrt(DX), 3));
+                (1d / N  * X.Sum((xi) => Math.Pow((xi - MX), 3)))/(Math.Pow(DX, 3d/2));
 		}
 
 		public NumericCharacteristic()
