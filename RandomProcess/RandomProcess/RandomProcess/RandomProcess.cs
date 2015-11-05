@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
@@ -55,8 +56,12 @@ namespace RandomProcess
 
 		public void ToFile(string FileName)
 		{
-			throw new System.NotImplementedException();
-		}
+            StreamWriter str = new StreamWriter(FileName);
+            for (int i = 0; i < N; i++)
+                str.Write(String.Format("{0:0.##}", Sample[i]) + ";");
+
+            str.Close();
+        }
 
 		/// <summary>
 		/// сброс состояния синглтон класса
