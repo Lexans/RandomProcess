@@ -26,12 +26,19 @@ namespace RandomProcess
 
 		public double CalcKe()
 		{
-			throw new System.NotImplementedException();
+            double MX = CalcMx();
+            double DX = CalcDX();
+
+            return ( 1 / (N - 1) * X.Sum((xi) => Math.Pow((xi - MX), 4)))/(Math.Pow(DX ,2)) ;
 		}
 
 		public double CalcKa()
 		{
-			throw new System.NotImplementedException();
+            double MX = CalcMx();
+            double DX = CalcDX();
+            
+            return 
+                (1 / N  * X.Sum((xi) => Math.Pow((xi - MX), 3)))/(Math.Pow(Math.Sqrt(DX), 3));
 		}
 
 		public NumericCharacteristic()
