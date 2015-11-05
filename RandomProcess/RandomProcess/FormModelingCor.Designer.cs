@@ -42,9 +42,9 @@
             this.columnHeaderValue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panelCanvas = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButtonCorFunc = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.buttonNewArray = new System.Windows.Forms.Button();
-            this.radioButtonCorFunc = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -149,6 +149,16 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Вероятностные характеристики";
             // 
+            // radioButtonCorFunc
+            // 
+            this.radioButtonCorFunc.AutoSize = true;
+            this.radioButtonCorFunc.Location = new System.Drawing.Point(24, 355);
+            this.radioButtonCorFunc.Name = "radioButtonCorFunc";
+            this.radioButtonCorFunc.Size = new System.Drawing.Size(203, 21);
+            this.radioButtonCorFunc.TabIndex = 9;
+            this.radioButtonCorFunc.Text = "Корреляционная функция";
+            this.radioButtonCorFunc.UseVisualStyleBackColor = true;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.listViewChar);
@@ -169,16 +179,6 @@
             this.buttonNewArray.Text = "Новая выборка";
             this.buttonNewArray.UseVisualStyleBackColor = true;
             // 
-            // radioButtonCorFunc
-            // 
-            this.radioButtonCorFunc.AutoSize = true;
-            this.radioButtonCorFunc.Location = new System.Drawing.Point(24, 355);
-            this.radioButtonCorFunc.Name = "radioButtonCorFunc";
-            this.radioButtonCorFunc.Size = new System.Drawing.Size(203, 21);
-            this.radioButtonCorFunc.TabIndex = 9;
-            this.radioButtonCorFunc.Text = "Корреляционная функция";
-            this.radioButtonCorFunc.UseVisualStyleBackColor = true;
-            // 
             // FormModelingCor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -195,6 +195,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormModelingCor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Результаты моделирования";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

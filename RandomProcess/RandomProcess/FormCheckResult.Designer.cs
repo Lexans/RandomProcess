@@ -106,6 +106,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormCheckResult";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Результат проверки гипотезы";
             this.ResumeLayout(false);
             this.PerformLayout();

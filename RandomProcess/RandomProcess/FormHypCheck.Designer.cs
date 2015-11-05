@@ -122,6 +122,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormHypCheck";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Проверка гипотезы";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -137,6 +137,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormCorFunc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Корреляционная функция";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

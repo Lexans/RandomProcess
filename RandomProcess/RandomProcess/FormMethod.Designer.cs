@@ -33,9 +33,9 @@
             this.radioButtonDistributionLaw = new System.Windows.Forms.RadioButton();
             this.radioButtonCorrelationFunction = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownN = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownN)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonNext
@@ -47,6 +47,7 @@
             this.buttonNext.TabIndex = 0;
             this.buttonNext.Text = "Далее";
             this.buttonNext.UseVisualStyleBackColor = true;
+            this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
             // 
             // labelVolumeArray
             // 
@@ -91,23 +92,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Способ моделирования";
             // 
-            // numericUpDown1
+            // numericUpDownN
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(44, 152);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.numericUpDownN.Location = new System.Drawing.Point(44, 152);
+            this.numericUpDownN.Maximum = new decimal(new int[] {
             10000,
             0,
             0,
             0});
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.numericUpDownN.Minimum = new decimal(new int[] {
             500,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
-            this.numericUpDown1.TabIndex = 7;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.numericUpDownN.Name = "numericUpDownN";
+            this.numericUpDownN.Size = new System.Drawing.Size(120, 22);
+            this.numericUpDownN.TabIndex = 7;
+            this.numericUpDownN.Value = new decimal(new int[] {
             500,
             0,
             0,
@@ -118,7 +119,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 212);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numericUpDownN);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelVolumeArray);
             this.Controls.Add(this.buttonNext);
@@ -129,7 +130,7 @@
             this.Text = "Способ моделирования";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownN)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,7 +143,7 @@
         private System.Windows.Forms.RadioButton radioButtonDistributionLaw;
         private System.Windows.Forms.RadioButton radioButtonCorrelationFunction;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericUpDownN;
     }
 }
 

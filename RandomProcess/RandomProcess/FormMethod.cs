@@ -17,9 +17,21 @@ namespace RandomProcess
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void buttonNext_Click(object sender, EventArgs e)
         {
+            RandomProcess.Inst.N = (int) numericUpDownN.Value;
 
+            Hide();
+
+            if(radioButtonDistributionLaw.Checked)
+                (new FormDistrLaw()).ShowDialog(this);
+            else if(radioButtonCorrelationFunction.Checked)
+                (new FormCorFunc()).ShowDialog(this);
+
+            Show();
         }
+
+
+
     }
 }

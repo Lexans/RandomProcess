@@ -100,6 +100,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormRegen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Генерация новой выборки";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNewValue)).EndInit();
             this.ResumeLayout(false);
