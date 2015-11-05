@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("MX");
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("DX");
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("Ka");
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("Kε");
-            this.buttonHypothesisTesting = new System.Windows.Forms.Button();
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("MX");
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("DX");
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("Ka");
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem("Kε");
+            this.buttonHypCheck = new System.Windows.Forms.Button();
             this.buttonComplete = new System.Windows.Forms.Button();
             this.buttonAgo = new System.Windows.Forms.Button();
             this.buttonSaveArray = new System.Windows.Forms.Button();
@@ -46,19 +46,21 @@
             this.buttonNewArray = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButtonCorrF = new System.Windows.Forms.RadioButton();
+            this.saveFileDialogSample = new System.Windows.Forms.SaveFileDialog();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // buttonHypothesisTesting
+            // buttonHypCheck
             // 
-            this.buttonHypothesisTesting.Location = new System.Drawing.Point(18, 342);
-            this.buttonHypothesisTesting.Name = "buttonHypothesisTesting";
-            this.buttonHypothesisTesting.Size = new System.Drawing.Size(197, 30);
-            this.buttonHypothesisTesting.TabIndex = 3;
-            this.buttonHypothesisTesting.Text = "Проверка гипотезы";
-            this.buttonHypothesisTesting.UseVisualStyleBackColor = true;
+            this.buttonHypCheck.Location = new System.Drawing.Point(18, 342);
+            this.buttonHypCheck.Name = "buttonHypCheck";
+            this.buttonHypCheck.Size = new System.Drawing.Size(197, 30);
+            this.buttonHypCheck.TabIndex = 3;
+            this.buttonHypCheck.Text = "Проверка гипотезы";
+            this.buttonHypCheck.UseVisualStyleBackColor = true;
+            this.buttonHypCheck.Click += new System.EventHandler(this.buttonHypCheck_Click);
             // 
             // buttonComplete
             // 
@@ -69,16 +71,19 @@
             this.buttonComplete.TabIndex = 14;
             this.buttonComplete.Text = "Завершить";
             this.buttonComplete.UseVisualStyleBackColor = true;
+            this.buttonComplete.Click += new System.EventHandler(this.buttonComplete_Click);
             // 
             // buttonAgo
             // 
             this.buttonAgo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAgo.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonAgo.Location = new System.Drawing.Point(725, 413);
             this.buttonAgo.Name = "buttonAgo";
             this.buttonAgo.Size = new System.Drawing.Size(117, 30);
             this.buttonAgo.TabIndex = 13;
             this.buttonAgo.Text = "Назад";
             this.buttonAgo.UseVisualStyleBackColor = true;
+            this.buttonAgo.Click += new System.EventHandler(this.buttonAgo_Click);
             // 
             // buttonSaveArray
             // 
@@ -88,6 +93,7 @@
             this.buttonSaveArray.TabIndex = 12;
             this.buttonSaveArray.Text = "Сохранить выборку в файл";
             this.buttonSaveArray.UseVisualStyleBackColor = true;
+            this.buttonSaveArray.Click += new System.EventHandler(this.buttonSaveArray_Click);
             // 
             // radioButtonDistrFunction
             // 
@@ -98,6 +104,7 @@
             this.radioButtonDistrFunction.TabIndex = 5;
             this.radioButtonDistrFunction.Text = "Функция распределения";
             this.radioButtonDistrFunction.UseVisualStyleBackColor = true;
+            this.radioButtonDistrFunction.CheckedChanged += new System.EventHandler(this.radioButtonDistrFunction_CheckedChanged);
             // 
             // radioButtonDensity
             // 
@@ -110,6 +117,7 @@
             this.radioButtonDensity.TabStop = true;
             this.radioButtonDensity.Text = "Плотность";
             this.radioButtonDensity.UseVisualStyleBackColor = true;
+            this.radioButtonDensity.CheckedChanged += new System.EventHandler(this.radioButtonDensity_CheckedChanged);
             // 
             // listViewChar
             // 
@@ -119,10 +127,10 @@
             this.columnHeaderAnalyt});
             this.listViewChar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewChar.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem5,
-            listViewItem6,
-            listViewItem7,
-            listViewItem8});
+            listViewItem9,
+            listViewItem10,
+            listViewItem11,
+            listViewItem12});
             this.listViewChar.Location = new System.Drawing.Point(3, 18);
             this.listViewChar.Name = "listViewChar";
             this.listViewChar.Size = new System.Drawing.Size(476, 156);
@@ -152,6 +160,7 @@
             this.panelCanvas.Name = "panelCanvas";
             this.panelCanvas.Size = new System.Drawing.Size(455, 252);
             this.panelCanvas.TabIndex = 8;
+            this.panelCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCanvas_Paint);
             // 
             // buttonNewArray
             // 
@@ -161,6 +170,7 @@
             this.buttonNewArray.TabIndex = 17;
             this.buttonNewArray.Text = "Новая выборка";
             this.buttonNewArray.UseVisualStyleBackColor = true;
+            this.buttonNewArray.Click += new System.EventHandler(this.buttonNewArray_Click);
             // 
             // groupBox2
             // 
@@ -170,11 +180,11 @@
             this.groupBox2.Size = new System.Drawing.Size(482, 177);
             this.groupBox2.TabIndex = 16;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Статистические оценки";
+            this.groupBox2.Text = "Числовые характеристики";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.radioButtonCorrF);
             this.groupBox1.Controls.Add(this.radioButtonDistrFunction);
             this.groupBox1.Controls.Add(this.panelCanvas);
             this.groupBox1.Controls.Add(this.radioButtonDensity);
@@ -185,15 +195,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Вероятностные характеристики";
             // 
-            // radioButton1
+            // radioButtonCorrF
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(11, 343);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(203, 21);
-            this.radioButton1.TabIndex = 9;
-            this.radioButton1.Text = "Корреляционная функция";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonCorrF.AutoSize = true;
+            this.radioButtonCorrF.Location = new System.Drawing.Point(11, 343);
+            this.radioButtonCorrF.Name = "radioButtonCorrF";
+            this.radioButtonCorrF.Size = new System.Drawing.Size(203, 21);
+            this.radioButtonCorrF.TabIndex = 9;
+            this.radioButtonCorrF.Text = "Корреляционная функция";
+            this.radioButtonCorrF.UseVisualStyleBackColor = true;
+            this.radioButtonCorrF.CheckedChanged += new System.EventHandler(this.radioButtonCorrF_CheckedChanged);
+            // 
+            // saveFileDialogSample
+            // 
+            this.saveFileDialogSample.DefaultExt = "csv";
+            this.saveFileDialogSample.Filter = "CSV|*.csv";
+            this.saveFileDialogSample.ShowHelp = true;
+            this.saveFileDialogSample.Title = "Сохранение выборки в файл";
             // 
             // FormModelingDistr
             // 
@@ -206,7 +224,7 @@
             this.Controls.Add(this.buttonNewArray);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.buttonHypothesisTesting);
+            this.Controls.Add(this.buttonHypCheck);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HelpButton = true;
             this.MaximizeBox = false;
@@ -214,6 +232,7 @@
             this.Name = "FormModelingDistr";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Результаты моделирования";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormModelingDistr_FormClosed);
             this.Load += new System.EventHandler(this.FormModelingDistr_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -224,7 +243,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button buttonHypothesisTesting;
+        private System.Windows.Forms.Button buttonHypCheck;
         private System.Windows.Forms.Button buttonComplete;
         private System.Windows.Forms.Button buttonAgo;
         private System.Windows.Forms.Button buttonSaveArray;
@@ -238,6 +257,7 @@
         private System.Windows.Forms.Button buttonNewArray;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButtonCorrF;
+        private System.Windows.Forms.SaveFileDialog saveFileDialogSample;
     }
 }

@@ -15,6 +15,13 @@ namespace RandomProcess
         public FormRegen()
         {
             InitializeComponent();
+            numericUpDownNewValue.Value = RandomProcess.Inst.N;
+        }
+
+        private void buttonOk_Click(object sender, EventArgs e)
+        {
+            RandomProcess.Inst.N = (int)numericUpDownNewValue.Value;
+            RandomProcess.Inst.Generate();
         }
     }
 }

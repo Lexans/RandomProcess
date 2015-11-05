@@ -14,6 +14,7 @@ namespace RandomProcess
     {
         public FormHypCheck()
         {
+
             InitializeComponent();
         }
     }

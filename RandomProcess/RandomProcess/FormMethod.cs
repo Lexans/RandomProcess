@@ -23,12 +23,12 @@ namespace RandomProcess
 
             Hide();
 
-            if(radioButtonDistributionLaw.Checked)
-                (new FormDistrLaw()).ShowDialog(this);
-            else if(radioButtonCorrelationFunction.Checked)
-                (new FormCorFunc()).ShowDialog(this);
-
-            Show();
+            if (radioButtonDistributionLaw.Checked)
+                if ((new FormDistrLaw().ShowDialog(this)) == DialogResult.OK)
+                    Show();
+            else if (radioButtonCorrelationFunction.Checked)
+                 if ((new FormCorFunc().ShowDialog(this)) == DialogResult.OK)
+                    Show();
         }
 
 

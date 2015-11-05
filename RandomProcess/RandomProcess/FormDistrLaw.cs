@@ -96,9 +96,12 @@ namespace RandomProcess
             }
         }
 
+
         private void FormDistrLaw_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+            //закрытие всего приложения по крестику в заголовке
+            if (DialogResult == DialogResult.Cancel)
+                Application.Exit();
         }
 
         private void buttonNext_Click(object sender, EventArgs e)
@@ -124,8 +127,8 @@ namespace RandomProcess
 
                 case "Нормальный":
                     DistrNormal dn = new DistrNormal(
-                        (double)numericUpDownParam1.Value,
-                        (double)numericUpDownParam2.Value);
+                        (double)numericUpDownParam2.Value,
+                        (double)numericUpDownParam1.Value);
 
                     RandomProcess.Inst.Stochastic = dn;
                     break;
@@ -134,8 +137,9 @@ namespace RandomProcess
             RandomProcess.Inst.Generate();
 
             Hide();
-            new FormModelingDistr().ShowDialog(this);
-            Show();
+            if ((new FormModelingDistr().ShowDialog(this)) == DialogResult.OK)
+                Show();
+
         }
 
 

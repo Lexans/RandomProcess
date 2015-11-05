@@ -17,6 +17,7 @@ namespace RandomProcess
             InitializeComponent();
 
             FillNumericChs();
+            DrawProbCurces();
         }
 
         private void listViewChar_SelectedIndexChanged(object sender, EventArgs e)
@@ -55,5 +56,79 @@ namespace RandomProcess
                 NumFormat(nc.CalcKe()),
                 NumFormat(dl.CalcKe())});
         }
+
+        private void DrawProbCurces()
+        {
+            ProbCurves pc = new ProbCurves();
+            pc.Canvas = panelCanvas.CreateGraphics();
+
+            if (radioButtonDensity.Checked)
+                pc.DrawHistogram();
+            else if (radioButtonDistrFunction.Checked)
+                pc.DrawDistrFunc();
+
+        }
+
+        private void buttonAgo_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void buttonComplete_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void buttonNewArray_Click(object sender, EventArgs e)
+        {
+            if (new FormRegen().ShowDialog() == DialogResult.OK)
+            {
+                FillNumericChs();
+                DrawProbCurces();
+            }
+        }
+
+        private void FormModelingDistr_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //закрытие всего приложения по крестику в заголовке
+            if (DialogResult == DialogResult.Cancel)
+                Application.Exit();
+        }
+
+        private void buttonSaveArray_Click(object sender, EventArgs e)
+        {
+            if(saveFileDialogSample.ShowDialog() == DialogResult.OK)
+            {
+                RandomProcess.Inst.ToFile(saveFileDialogSample.FileName);
+            }
+
+        }
+
+        private void buttonHypCheck_Click(object sender, EventArgs e)
+        {
+            (new FormHypCheck()).ShowDialog();
+        }
+
+        private void panelCanvas_Paint(object sender, PaintEventArgs e)
+        {
+            DrawProbCurces();
+        }
+
+        private void radioButtonDensity_CheckedChanged(object sender, EventArgs e)
+        {
+            DrawProbCurces();
+        }
+
+        private void radioButtonDistrFunction_CheckedChanged(object sender, EventArgs e)
+        {
+            DrawProbCurces();
+        }
+
+        private void radioButtonCorrF_CheckedChanged(object sender, EventArgs e)
+        {
+            DrawProbCurces();
+        }
+
+
     }
 }

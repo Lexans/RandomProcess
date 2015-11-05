@@ -98,6 +98,7 @@
             // buttonPrev
             // 
             this.buttonPrev.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonPrev.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonPrev.Location = new System.Drawing.Point(23, 221);
             this.buttonPrev.Name = "buttonPrev";
             this.buttonPrev.Size = new System.Drawing.Size(115, 36);
