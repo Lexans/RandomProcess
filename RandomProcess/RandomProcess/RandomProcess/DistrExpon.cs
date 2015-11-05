@@ -13,41 +13,48 @@ namespace RandomProcess
 
 		public double CalcDx()
 		{
-			throw new System.NotImplementedException();
+            return 1 / Math.Pow(Intensity, 2);
 		}
 
 		public double CalcKa()
 		{
-			throw new System.NotImplementedException();
+            return 2;
 		}
 
 		public double CalcKe()
 		{
-			throw new System.NotImplementedException();
+            return 6;
 		}
 
 		public double CalcMx()
 		{
-			throw new System.NotImplementedException();
+            return 1 / Intensity;
 		}
 
 		public double DensityFunc(double x)
 		{
-			throw new System.NotImplementedException();
+            if (0 < x)
+                return Intensity * Math.Exp(-Intensity * x);
+            else
+                return 0;
 		}
 
 		public double DistributionFunc(double x)
 		{
-			throw new System.NotImplementedException();
+            if (0 < x)
+                return 1 - Math.Exp(-Intensity * x);
+            else
+                return 0;
 		}
 
 		public double GetSample()
 		{
-			throw new System.NotImplementedException();
+            return (-1 / Intensity) * Math.Log(1-rand.NextDouble());
 		}
 
 		public DistrExpon(double Intensity)
 		{
+            this.Intensity = Intensity;
 		}
 
 	}

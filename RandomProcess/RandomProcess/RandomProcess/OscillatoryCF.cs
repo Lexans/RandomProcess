@@ -13,7 +13,8 @@ namespace RandomProcess
 
 		public double CorrFunc(double tau)
 		{
-			throw new System.NotImplementedException();
+            return Math.Exp(-A * Math.Abs(tau)) * Math.Cos(W * tau);
+
 		}
 
 		public double GetSample()
@@ -23,6 +24,9 @@ namespace RandomProcess
 
 		public OscillatoryCF(double A, double W)
 		{
+            this.A = A;
+            this.W = W;
+
 		}
 
 	}
