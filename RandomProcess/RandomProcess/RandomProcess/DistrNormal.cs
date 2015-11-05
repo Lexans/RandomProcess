@@ -40,13 +40,45 @@ namespace RandomProcess
 
 		public double DistributionFunc(double x)
 		{
-            throw new System.NotImplementedException();
+            double Fx = 1 / Math.Sqrt(2 * Math.PI * Dx) * Integrate(x);
+
+            return Fx;
+		}
+
+
+		/// <summary>
+		/// интегрирование функции e^-((x-a)^2)/(2*dx) от xMin до x
+		/// </summary>
+		/// <param name="x">верхний предел интегрирования</param>
+		private double Integrate(double x)
+		{
+            double result = 0;
+            double step = 0.01; //шаг интегрирования
+
+            double curX = Mx - 9 * Math.Sqrt(Dx);
+
+            do
+            {
+                double fx = Math.Exp(-Math.Pow(((curX + step / 2) - Mx), 2) / (2 * Dx));
+                result += fx * step;
+
+                curX += step;
+            }
+            while (curX <= x);
+
+            return result;
 		}
 
 		public Double GetSample()
 		{
-            throw new System.NotImplementedException();
-		}
+            double sum;
+
+            sum = 0;
+            for (int i = 0; i < 12; i++)
+                sum += rand.NextDouble();
+
+            return Math.Sqrt(Dx) * (sum - 6) + Mx;
+        }
 
 		public DistrNormal(double Dx, double Mx)
 		{
