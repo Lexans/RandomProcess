@@ -31,6 +31,11 @@ namespace RandomProcess
                     Show();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Авторы Антоха и Леха кароч");
+        }
+
 
 
     }
