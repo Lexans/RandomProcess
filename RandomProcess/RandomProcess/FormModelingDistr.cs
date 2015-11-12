@@ -12,6 +12,8 @@ namespace RandomProcess
 {
     public partial class FormModelingDistr : Form
     {
+        ProbCurves pc;
+
         public FormModelingDistr()
         {
             InitializeComponent();
@@ -59,7 +61,7 @@ namespace RandomProcess
 
         private void DrawProbCurces()
         {
-            ProbCurves pc = new ProbCurves();
+            pc = new ProbCurves();
             pc.Canvas = panelCanvas.CreateGraphics();
 
             if (radioButtonDensity.Checked)
@@ -106,7 +108,7 @@ namespace RandomProcess
 
         private void buttonHypCheck_Click(object sender, EventArgs e)
         {
-            (new FormHypCheck()).ShowDialog();
+            (new FormHypCheck(pc)).ShowDialog();
         }
 
         private void panelCanvas_Paint(object sender, PaintEventArgs e)

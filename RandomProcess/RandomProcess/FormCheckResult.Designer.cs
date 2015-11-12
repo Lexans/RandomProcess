@@ -32,8 +32,8 @@
             this.labelValueStatistics = new System.Windows.Forms.Label();
             this.labelCriticalRegion = new System.Windows.Forms.Label();
             this.labelResult = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBoxStat = new System.Windows.Forms.TextBox();
+            this.textBoxCritPoint = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // buttonOK
@@ -45,6 +45,7 @@
             this.buttonOK.TabIndex = 0;
             this.buttonOK.Text = "OK";
             this.buttonOK.UseVisualStyleBackColor = true;
+            this.buttonOK.Click += new System.EventHandler(this.buttonOK_Click);
             // 
             // labelValueStatistics
             // 
@@ -54,16 +55,15 @@
             this.labelValueStatistics.Size = new System.Drawing.Size(151, 34);
             this.labelValueStatistics.TabIndex = 1;
             this.labelValueStatistics.Text = "Значение статистики\r\nкритерия:";
-            this.labelValueStatistics.Click += new System.EventHandler(this.labelValueStatistics_Click);
             // 
             // labelCriticalRegion
             // 
             this.labelCriticalRegion.AutoSize = true;
             this.labelCriticalRegion.Location = new System.Drawing.Point(16, 77);
             this.labelCriticalRegion.Name = "labelCriticalRegion";
-            this.labelCriticalRegion.Size = new System.Drawing.Size(155, 17);
+            this.labelCriticalRegion.Size = new System.Drawing.Size(140, 17);
             this.labelCriticalRegion.TabIndex = 3;
-            this.labelCriticalRegion.Text = "Критическая область:";
+            this.labelCriticalRegion.Text = "Критическая точка:";
             // 
             // labelResult
             // 
@@ -74,29 +74,29 @@
             this.labelResult.TabIndex = 4;
             this.labelResult.Text = "\"Результат\"";
             // 
-            // textBox1
+            // textBoxStat
             // 
-            this.textBox1.Location = new System.Drawing.Point(197, 24);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(131, 22);
-            this.textBox1.TabIndex = 5;
+            this.textBoxStat.Location = new System.Drawing.Point(197, 24);
+            this.textBoxStat.Name = "textBoxStat";
+            this.textBoxStat.ReadOnly = true;
+            this.textBoxStat.Size = new System.Drawing.Size(131, 22);
+            this.textBoxStat.TabIndex = 5;
             // 
-            // textBox3
+            // textBoxCritPoint
             // 
-            this.textBox3.Location = new System.Drawing.Point(197, 77);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(131, 22);
-            this.textBox3.TabIndex = 7;
+            this.textBoxCritPoint.Location = new System.Drawing.Point(197, 77);
+            this.textBoxCritPoint.Name = "textBoxCritPoint";
+            this.textBoxCritPoint.ReadOnly = true;
+            this.textBoxCritPoint.Size = new System.Drawing.Size(131, 22);
+            this.textBoxCritPoint.TabIndex = 7;
             // 
             // FormCheckResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(340, 212);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxCritPoint);
+            this.Controls.Add(this.textBoxStat);
             this.Controls.Add(this.labelResult);
             this.Controls.Add(this.labelCriticalRegion);
             this.Controls.Add(this.labelValueStatistics);
@@ -108,6 +108,7 @@
             this.Name = "FormCheckResult";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Результат проверки гипотезы";
+            this.Load += new System.EventHandler(this.FormCheckResult_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,7 +120,7 @@
         private System.Windows.Forms.Label labelValueStatistics;
         private System.Windows.Forms.Label labelCriticalRegion;
         private System.Windows.Forms.Label labelResult;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBoxStat;
+        private System.Windows.Forms.TextBox textBoxCritPoint;
     }
 }

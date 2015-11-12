@@ -69,6 +69,7 @@
             this.buttonPrev.TabIndex = 2;
             this.buttonPrev.Text = "Назад";
             this.buttonPrev.UseVisualStyleBackColor = true;
+            this.buttonPrev.Click += new System.EventHandler(this.buttonPrev_Click);
             // 
             // buttonCheck
             // 
@@ -79,6 +80,7 @@
             this.buttonCheck.TabIndex = 3;
             this.buttonCheck.Text = "Проверить";
             this.buttonCheck.UseVisualStyleBackColor = true;
+            this.buttonCheck.Click += new System.EventHandler(this.buttonCheck_Click);
             // 
             // labelLevelImportance
             // 
@@ -91,7 +93,14 @@
             // 
             // comboBoxA
             // 
+            this.comboBoxA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxA.FormattingEnabled = true;
+            this.comboBoxA.Items.AddRange(new object[] {
+            "0,1",
+            "0,05",
+            "0,02",
+            "0,01",
+            "0,001"});
             this.comboBoxA.Location = new System.Drawing.Point(18, 164);
             this.comboBoxA.Name = "comboBoxA";
             this.comboBoxA.Size = new System.Drawing.Size(223, 24);
