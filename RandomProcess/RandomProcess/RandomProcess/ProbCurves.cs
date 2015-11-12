@@ -55,17 +55,17 @@ namespace RandomProcess
             double scaleY = Canvas.VisibleClipBounds.Height /
                 h.Max() * 0.9;
 
-            //рисование функции плотности
+            //рисование аналитической функции плотности
             if(RandomProcess.Inst.Stochastic is IDistrLaw)
                 DrawFunc(((IDistrLaw)RandomProcess.Inst.Stochastic).DensityFunc,
-                scaleX, scaleY, xMin, hMax, new Pen(Color.Green, 1));
+                scaleX, scaleY, xMin, hMax, new Pen(Color.Black, 2));
 
 
             //отрисовка гистограммы
             for (int i = 0; i < nIntervals; i++)
             {
                 Canvas.DrawRectangle(
-                    new Pen(Color.Black, 2),
+                    new Pen(Color.Red, 1),
                     (float)(scaleX * (Bounds[i] - xMin)),
                     (float)(scaleY * (hMax - h[i])),
                     (float)(len * scaleX),
@@ -168,9 +168,10 @@ namespace RandomProcess
             if (RandomProcess.Inst.Stochastic is IDistrLaw)
                 DrawFunc(((IDistrLaw)RandomProcess.Inst.Stochastic).DistributionFunc,
                     scaleX, scaleY, xMin, hMax, new Pen(Color.Black, 2));
-
+            
+            //отрисовка оценки кор функции
             DrawFunc(DistrFunc,
-                scaleX, scaleY, xMin, hMax, new Pen(Color.Green, 1));
+                scaleX, scaleY, xMin, hMax, new Pen(Color.Red, 1));
         }
 
         public double DistrFunc(double x)
