@@ -37,7 +37,7 @@ namespace RandomProcess
                     numericUpDownParam1.Maximum = 100;
 
 
-                    numericUpDownParam2.Minimum = numericUpDownParam1.Value;
+                    numericUpDownParam2.Minimum = numericUpDownParam1.Value + 0.01M;
                     numericUpDownParam1.Maximum = 100;
 
                     numericUpDownParam1.Value = 0;

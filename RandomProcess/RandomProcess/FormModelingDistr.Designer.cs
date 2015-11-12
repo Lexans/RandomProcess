@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("MX");
-            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem("DX");
-            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem("Ka");
-            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem("Kε");
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("MX");
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("DX");
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("Ka");
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("Kε");
             this.buttonHypCheck = new System.Windows.Forms.Button();
             this.buttonComplete = new System.Windows.Forms.Button();
             this.buttonAgo = new System.Windows.Forms.Button();
@@ -54,7 +54,7 @@
             // 
             // buttonHypCheck
             // 
-            this.buttonHypCheck.Location = new System.Drawing.Point(18, 342);
+            this.buttonHypCheck.Location = new System.Drawing.Point(15, 234);
             this.buttonHypCheck.Name = "buttonHypCheck";
             this.buttonHypCheck.Size = new System.Drawing.Size(197, 30);
             this.buttonHypCheck.TabIndex = 3;
@@ -65,7 +65,7 @@
             // buttonComplete
             // 
             this.buttonComplete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonComplete.Location = new System.Drawing.Point(876, 413);
+            this.buttonComplete.Location = new System.Drawing.Point(386, 370);
             this.buttonComplete.Name = "buttonComplete";
             this.buttonComplete.Size = new System.Drawing.Size(105, 30);
             this.buttonComplete.TabIndex = 14;
@@ -77,7 +77,7 @@
             // 
             this.buttonAgo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAgo.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonAgo.Location = new System.Drawing.Point(725, 413);
+            this.buttonAgo.Location = new System.Drawing.Point(254, 370);
             this.buttonAgo.Name = "buttonAgo";
             this.buttonAgo.Size = new System.Drawing.Size(117, 30);
             this.buttonAgo.TabIndex = 13;
@@ -87,7 +87,7 @@
             // 
             // buttonSaveArray
             // 
-            this.buttonSaveArray.Location = new System.Drawing.Point(18, 416);
+            this.buttonSaveArray.Location = new System.Drawing.Point(15, 305);
             this.buttonSaveArray.Name = "buttonSaveArray";
             this.buttonSaveArray.Size = new System.Drawing.Size(197, 30);
             this.buttonSaveArray.TabIndex = 12;
@@ -127,10 +127,10 @@
             this.columnHeaderAnalyt});
             this.listViewChar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewChar.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem9,
-            listViewItem10,
-            listViewItem11,
-            listViewItem12});
+            listViewItem5,
+            listViewItem6,
+            listViewItem7,
+            listViewItem8});
             this.listViewChar.Location = new System.Drawing.Point(3, 18);
             this.listViewChar.Name = "listViewChar";
             this.listViewChar.Size = new System.Drawing.Size(476, 156);
@@ -164,7 +164,7 @@
             // 
             // buttonNewArray
             // 
-            this.buttonNewArray.Location = new System.Drawing.Point(18, 378);
+            this.buttonNewArray.Location = new System.Drawing.Point(15, 270);
             this.buttonNewArray.Name = "buttonNewArray";
             this.buttonNewArray.Size = new System.Drawing.Size(197, 29);
             this.buttonNewArray.TabIndex = 17;
@@ -217,7 +217,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(993, 455);
+            this.ClientSize = new System.Drawing.Size(993, 412);
             this.Controls.Add(this.buttonComplete);
             this.Controls.Add(this.buttonAgo);
             this.Controls.Add(this.buttonSaveArray);

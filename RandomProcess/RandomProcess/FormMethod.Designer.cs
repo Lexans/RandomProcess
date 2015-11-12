@@ -34,6 +34,7 @@
             this.radioButtonCorrelationFunction = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.numericUpDownN = new System.Windows.Forms.NumericUpDown();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownN)).BeginInit();
             this.SuspendLayout();
@@ -114,11 +115,21 @@
             0,
             0});
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(352, 12);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 27);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Об авторах";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // FormMethod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 212);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.numericUpDownN);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelVolumeArray);
@@ -144,6 +155,7 @@
         private System.Windows.Forms.RadioButton radioButtonCorrelationFunction;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.NumericUpDown numericUpDownN;
+        private System.Windows.Forms.Button button1;
     }
 }
 

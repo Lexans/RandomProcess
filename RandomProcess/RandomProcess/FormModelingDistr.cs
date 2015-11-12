@@ -32,7 +32,7 @@ namespace RandomProcess
 
 
         private string NumFormat(double num) {
-            return String.Format("{0:0.##}", num);
+            return String.Format("{0:0.######}", num);
         }
 
         private void FillNumericChs() {
