@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace RandomProcess
 {
-    public partial class FormDistrLaw : Form
+    public partial class FormSelectDistr : Form
     {
-        public FormDistrLaw()
+        public FormSelectDistr()
         {
             InitializeComponent();
-            comboBoxChoiceLawDistribution.SelectedIndex = 0;
+            comboBoxDistr.SelectedIndex = 0;
         }
 
         private void buttonPrev_Click(object sender, EventArgs e)
@@ -25,7 +25,7 @@ namespace RandomProcess
 
         private void comboBoxChoiceLawDistribution_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (comboBoxChoiceLawDistribution.SelectedItem.ToString())
+            switch (comboBoxDistr.SelectedItem.ToString())
             {
                 case "Равномерный":
                     labelParam1.Text = "a";
@@ -76,7 +76,7 @@ namespace RandomProcess
 
         private void numericUpDownParam1_ValueChanged(object sender, EventArgs e)
         {
-            switch (comboBoxChoiceLawDistribution.SelectedItem.ToString())
+            switch (comboBoxDistr.SelectedItem.ToString())
             {
                 case "Равномерный":
                     if(numericUpDownParam2.Value <= numericUpDownParam1.Value)
@@ -106,8 +106,7 @@ namespace RandomProcess
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-
-            switch (comboBoxChoiceLawDistribution.SelectedItem.ToString())
+            switch (comboBoxDistr.SelectedItem.ToString())
             {
                 case "Равномерный":
                     DistrUniform du = new DistrUniform(

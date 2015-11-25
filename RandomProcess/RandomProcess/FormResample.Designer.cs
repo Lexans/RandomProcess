@@ -1,6 +1,6 @@
 ﻿namespace RandomProcess
 {
-    partial class FormRegen
+    partial class FormResample
     {
         /// <summary>
         /// Required designer variable.

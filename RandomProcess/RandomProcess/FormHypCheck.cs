@@ -30,18 +30,18 @@ namespace RandomProcess
             ICriterion crit = null;
             if(radioButtonKolmogorov.Checked)
             {
-                KolmogorovCrit kolCrit = new KolmogorovCrit(pc);
+                CritKolmogorov kolCrit = new CritKolmogorov(pc);
                 kolCrit.SignificanceLevel = double.Parse(comboBoxA.SelectedItem.ToString());
                 crit = kolCrit;
             }
             else if(radioButtonPirson.Checked)
             {
-                PirsonCrit pirCrit = new PirsonCrit(pc);
+                CritPirson pirCrit = new CritPirson(pc);
                 pirCrit.SignificanceLevel = double.Parse(comboBoxA.SelectedItem.ToString());
                 crit = pirCrit;
             }
 
-            (new FormCheckResult(crit)).ShowDialog();
+            (new FormHypResult(crit)).ShowDialog();
         }
 
         private void buttonPrev_Click(object sender, EventArgs e)

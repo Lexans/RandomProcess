@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RandomProcess
 {
-    public partial class FormMethod : Form
+    public partial class FormSelectMethod : Form
     {
-        public FormMethod()
+        public FormSelectMethod()
         {
             InitializeComponent();
         }
@@ -23,12 +23,15 @@ namespace RandomProcess
 
             Hide();
 
-            if (radioButtonDistributionLaw.Checked)
-                if ((new FormDistrLaw().ShowDialog(this)) == DialogResult.OK)
+            if (radioButtonDistr.Checked)
+            {
+                if ((new FormSelectDistr().ShowDialog(this)) == DialogResult.OK)
                     Show();
-            else if (radioButtonCorrelationFunction.Checked)
-                 if ((new FormCorFunc().ShowDialog(this)) == DialogResult.OK)
+            }
+            else if (radioButtonCF.Checked) {
+                 if ((new FormSelectCF().ShowDialog(this)) == DialogResult.OK)
                     Show();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

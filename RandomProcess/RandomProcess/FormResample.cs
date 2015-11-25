@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RandomProcess
 {
-    public partial class FormRegen : Form
+    public partial class FormResample : Form
     {
-        public FormRegen()
+        public FormResample()
         {
             InitializeComponent();
             numericUpDownNewValue.Value = RandomProcess.Inst.N;

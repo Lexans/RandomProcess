@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace RandomProcess
 {
-    public partial class FormCheckResult : Form
+    public partial class FormHypResult : Form
     {
         private ICriterion crit;
 
-        public FormCheckResult(ICriterion crit) : this()
+        public FormHypResult(ICriterion crit) : this()
         {
             this.crit = crit;
         }
 
-        public FormCheckResult()
+        public FormHypResult()
         {
             InitializeComponent();
         }

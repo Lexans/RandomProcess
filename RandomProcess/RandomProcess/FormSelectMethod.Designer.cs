@@ -1,6 +1,6 @@
 ﻿namespace RandomProcess
 {
-    partial class FormMethod
+    partial class FormSelectMethod
     {
         /// <summary>
         /// Требуется переменная конструктора.
@@ -30,8 +30,8 @@
         {
             this.buttonNext = new System.Windows.Forms.Button();
             this.labelVolumeArray = new System.Windows.Forms.Label();
-            this.radioButtonDistributionLaw = new System.Windows.Forms.RadioButton();
-            this.radioButtonCorrelationFunction = new System.Windows.Forms.RadioButton();
+            this.radioButtonDistr = new System.Windows.Forms.RadioButton();
+            this.radioButtonCF = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.numericUpDownN = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
@@ -59,33 +59,33 @@
             this.labelVolumeArray.TabIndex = 1;
             this.labelVolumeArray.Text = "Объем выборки N:";
             // 
-            // radioButtonDistributionLaw
+            // radioButtonDistr
             // 
-            this.radioButtonDistributionLaw.AutoSize = true;
-            this.radioButtonDistributionLaw.Checked = true;
-            this.radioButtonDistributionLaw.Location = new System.Drawing.Point(6, 31);
-            this.radioButtonDistributionLaw.Name = "radioButtonDistributionLaw";
-            this.radioButtonDistributionLaw.Size = new System.Drawing.Size(203, 21);
-            this.radioButtonDistributionLaw.TabIndex = 4;
-            this.radioButtonDistributionLaw.TabStop = true;
-            this.radioButtonDistributionLaw.Text = "По закону распределения";
-            this.radioButtonDistributionLaw.UseVisualStyleBackColor = true;
+            this.radioButtonDistr.AutoSize = true;
+            this.radioButtonDistr.Checked = true;
+            this.radioButtonDistr.Location = new System.Drawing.Point(6, 31);
+            this.radioButtonDistr.Name = "radioButtonDistr";
+            this.radioButtonDistr.Size = new System.Drawing.Size(203, 21);
+            this.radioButtonDistr.TabIndex = 4;
+            this.radioButtonDistr.TabStop = true;
+            this.radioButtonDistr.Text = "По закону распределения";
+            this.radioButtonDistr.UseVisualStyleBackColor = true;
             // 
-            // radioButtonCorrelationFunction
+            // radioButtonCF
             // 
-            this.radioButtonCorrelationFunction.AutoSize = true;
-            this.radioButtonCorrelationFunction.Location = new System.Drawing.Point(6, 58);
-            this.radioButtonCorrelationFunction.Name = "radioButtonCorrelationFunction";
-            this.radioButtonCorrelationFunction.Size = new System.Drawing.Size(223, 21);
-            this.radioButtonCorrelationFunction.TabIndex = 5;
-            this.radioButtonCorrelationFunction.TabStop = true;
-            this.radioButtonCorrelationFunction.Text = "По корреляционной функции";
-            this.radioButtonCorrelationFunction.UseVisualStyleBackColor = true;
+            this.radioButtonCF.AutoSize = true;
+            this.radioButtonCF.Location = new System.Drawing.Point(6, 58);
+            this.radioButtonCF.Name = "radioButtonCF";
+            this.radioButtonCF.Size = new System.Drawing.Size(223, 21);
+            this.radioButtonCF.TabIndex = 5;
+            this.radioButtonCF.TabStop = true;
+            this.radioButtonCF.Text = "По корреляционной функции";
+            this.radioButtonCF.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radioButtonDistributionLaw);
-            this.groupBox1.Controls.Add(this.radioButtonCorrelationFunction);
+            this.groupBox1.Controls.Add(this.radioButtonDistr);
+            this.groupBox1.Controls.Add(this.radioButtonCF);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(259, 98);
@@ -125,7 +125,7 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // FormMethod
+            // FormSelectMethod
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -135,10 +135,11 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.labelVolumeArray);
             this.Controls.Add(this.buttonNext);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.HelpButton = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FormMethod";
+            this.Name = "FormSelectMethod";
             this.Text = "Способ моделирования";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -152,8 +153,8 @@
 
         private System.Windows.Forms.Button buttonNext;
         private System.Windows.Forms.Label labelVolumeArray;
-        private System.Windows.Forms.RadioButton radioButtonDistributionLaw;
-        private System.Windows.Forms.RadioButton radioButtonCorrelationFunction;
+        private System.Windows.Forms.RadioButton radioButtonDistr;
+        private System.Windows.Forms.RadioButton radioButtonCF;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.NumericUpDown numericUpDownN;
         private System.Windows.Forms.Button button1;

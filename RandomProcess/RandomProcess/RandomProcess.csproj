@@ -68,11 +68,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormDistrLaw.cs">
+    <Compile Include="FormSelectDistr.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDistrLaw.Designer.cs">
-      <DependentUpon>FormDistrLaw.cs</DependentUpon>
+    <Compile Include="FormSelectDistr.Designer.cs">
+      <DependentUpon>FormSelectDistr.cs</DependentUpon>
     </Compile>
     <Compile Include="FormHypCheck.cs">
       <SubType>Form</SubType>
@@ -80,35 +80,35 @@
     <Compile Include="FormHypCheck.Designer.cs">
       <DependentUpon>FormHypCheck.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMethod.cs">
+    <Compile Include="FormSelectMethod.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMethod.Designer.cs">
-      <DependentUpon>FormMethod.cs</DependentUpon>
+    <Compile Include="FormSelectMethod.Designer.cs">
+      <DependentUpon>FormSelectMethod.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCorFunc.cs">
+    <Compile Include="FormSelectCF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCorFunc.Designer.cs">
-      <DependentUpon>FormCorFunc.cs</DependentUpon>
+    <Compile Include="FormSelectCF.Designer.cs">
+      <DependentUpon>FormSelectCF.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRegen.cs">
+    <Compile Include="FormResample.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRegen.Designer.cs">
-      <DependentUpon>FormRegen.cs</DependentUpon>
+    <Compile Include="FormResample.Designer.cs">
+      <DependentUpon>FormResample.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCheckResult.cs">
+    <Compile Include="FormHypResult.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCheckResult.Designer.cs">
-      <DependentUpon>FormCheckResult.cs</DependentUpon>
+    <Compile Include="FormHypResult.Designer.cs">
+      <DependentUpon>FormHypResult.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormModelingCor.cs">
+    <Compile Include="FormModelingCF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormModelingCor.Designer.cs">
-      <DependentUpon>FormModelingCor.cs</DependentUpon>
+    <Compile Include="FormModelingCF.Designer.cs">
+      <DependentUpon>FormModelingCF.cs</DependentUpon>
     </Compile>
     <Compile Include="FormModelingDistr.cs">
       <SubType>Form</SubType>
@@ -118,7 +118,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RandomProcess\DecayingCF.cs" />
+    <Compile Include="RandomProcess\CFDecaying.cs" />
     <Compile Include="RandomProcess\DistrExpon.cs" />
     <Compile Include="RandomProcess\DistrNormal.cs" />
     <Compile Include="RandomProcess\DistrUniform.cs" />
@@ -126,32 +126,32 @@
     <Compile Include="RandomProcess\ICriterion.cs" />
     <Compile Include="RandomProcess\IDistrLaw.cs" />
     <Compile Include="RandomProcess\IModeling.cs" />
-    <Compile Include="RandomProcess\KolmogorovCrit.cs" />
+    <Compile Include="RandomProcess\CritKolmogorov.cs" />
     <Compile Include="RandomProcess\NumericCharacteristic.cs" />
-    <Compile Include="RandomProcess\OscillatoryCF.cs" />
-    <Compile Include="RandomProcess\PirsonCrit.cs" />
+    <Compile Include="RandomProcess\CFOscillatory.cs" />
+    <Compile Include="RandomProcess\CritPirson.cs" />
     <Compile Include="RandomProcess\ProbCurves.cs" />
     <Compile Include="RandomProcess\RandomProcess.cs" />
-    <EmbeddedResource Include="FormDistrLaw.resx">
-      <DependentUpon>FormDistrLaw.cs</DependentUpon>
+    <EmbeddedResource Include="FormSelectDistr.resx">
+      <DependentUpon>FormSelectDistr.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormHypCheck.resx">
       <DependentUpon>FormHypCheck.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMethod.resx">
-      <DependentUpon>FormMethod.cs</DependentUpon>
+    <EmbeddedResource Include="FormSelectMethod.resx">
+      <DependentUpon>FormSelectMethod.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCorFunc.resx">
-      <DependentUpon>FormCorFunc.cs</DependentUpon>
+    <EmbeddedResource Include="FormSelectCF.resx">
+      <DependentUpon>FormSelectCF.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormRegen.resx">
-      <DependentUpon>FormRegen.cs</DependentUpon>
+    <EmbeddedResource Include="FormResample.resx">
+      <DependentUpon>FormResample.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCheckResult.resx">
-      <DependentUpon>FormCheckResult.cs</DependentUpon>
+    <EmbeddedResource Include="FormHypResult.resx">
+      <DependentUpon>FormHypResult.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormModelingCor.resx">
-      <DependentUpon>FormModelingCor.cs</DependentUpon>
+    <EmbeddedResource Include="FormModelingCF.resx">
+      <DependentUpon>FormModelingCF.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormModelingDistr.resx">
       <DependentUpon>FormModelingDistr.cs</DependentUpon>

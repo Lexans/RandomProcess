@@ -5,7 +5,7 @@ using System.Text;
 
 namespace RandomProcess
 {
-	public sealed class PirsonCrit : ICriterion
+	public sealed class CritPirson : ICriterion
 	{
         public double SignificanceLevel;
 
@@ -56,7 +56,7 @@ namespace RandomProcess
             return result;
 		}
 
-		public PirsonCrit(ProbCurves Src)
+		public CritPirson(ProbCurves Src)
 		{
             SignificanceLevel = 0.05;
             this.Source = Src;

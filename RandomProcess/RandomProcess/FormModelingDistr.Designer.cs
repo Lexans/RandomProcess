@@ -137,7 +137,6 @@
             this.listViewChar.TabIndex = 7;
             this.listViewChar.UseCompatibleStateImageBehavior = false;
             this.listViewChar.View = System.Windows.Forms.View.Details;
-            this.listViewChar.SelectedIndexChanged += new System.EventHandler(this.listViewChar_SelectedIndexChanged);
             // 
             // columnHeaderChar
             // 
@@ -233,7 +232,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Результаты моделирования";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormModelingDistr_FormClosed);
-            this.Load += new System.EventHandler(this.FormModelingDistr_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -1,6 +1,6 @@
 ﻿namespace RandomProcess
 {
-    partial class FormDistrLaw
+    partial class FormSelectDistr
     {
         /// <summary>
         /// Required designer variable.
@@ -33,7 +33,7 @@
             this.labelParam2 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.buttonNext = new System.Windows.Forms.Button();
-            this.comboBoxChoiceLawDistribution = new System.Windows.Forms.ComboBox();
+            this.comboBoxDistr = new System.Windows.Forms.ComboBox();
             this.buttonPrev = new System.Windows.Forms.Button();
             this.numericUpDownParam1 = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownParam2 = new System.Windows.Forms.NumericUpDown();
@@ -81,19 +81,19 @@
             this.buttonNext.UseVisualStyleBackColor = true;
             this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
             // 
-            // comboBoxChoiceLawDistribution
+            // comboBoxDistr
             // 
-            this.comboBoxChoiceLawDistribution.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxChoiceLawDistribution.FormattingEnabled = true;
-            this.comboBoxChoiceLawDistribution.Items.AddRange(new object[] {
+            this.comboBoxDistr.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDistr.FormattingEnabled = true;
+            this.comboBoxDistr.Items.AddRange(new object[] {
             "Равномерный",
             "Нормальный",
             "Экспоненциальный"});
-            this.comboBoxChoiceLawDistribution.Location = new System.Drawing.Point(34, 59);
-            this.comboBoxChoiceLawDistribution.Name = "comboBoxChoiceLawDistribution";
-            this.comboBoxChoiceLawDistribution.Size = new System.Drawing.Size(228, 24);
-            this.comboBoxChoiceLawDistribution.TabIndex = 7;
-            this.comboBoxChoiceLawDistribution.SelectedIndexChanged += new System.EventHandler(this.comboBoxChoiceLawDistribution_SelectedIndexChanged);
+            this.comboBoxDistr.Location = new System.Drawing.Point(34, 59);
+            this.comboBoxDistr.Name = "comboBoxDistr";
+            this.comboBoxDistr.Size = new System.Drawing.Size(228, 24);
+            this.comboBoxDistr.TabIndex = 7;
+            this.comboBoxDistr.SelectedIndexChanged += new System.EventHandler(this.comboBoxChoiceLawDistribution_SelectedIndexChanged);
             // 
             // buttonPrev
             // 
@@ -144,7 +144,7 @@
             this.ClientSize = new System.Drawing.Size(359, 269);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonPrev);
-            this.Controls.Add(this.comboBoxChoiceLawDistribution);
+            this.Controls.Add(this.comboBoxDistr);
             this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.labelDistributionLaw);
             this.HelpButton = true;
@@ -170,7 +170,7 @@
         private System.Windows.Forms.Label labelParam2;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button buttonNext;
-        private System.Windows.Forms.ComboBox comboBoxChoiceLawDistribution;
+        private System.Windows.Forms.ComboBox comboBoxDistr;
         private System.Windows.Forms.Button buttonPrev;
         private System.Windows.Forms.NumericUpDown numericUpDownParam1;
         private System.Windows.Forms.NumericUpDown numericUpDownParam2;

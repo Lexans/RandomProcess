@@ -5,7 +5,7 @@ using System.Text;
 
 namespace RandomProcess
 {
-    public sealed class KolmogorovCrit : ICriterion
+    public sealed class CritKolmogorov : ICriterion
     {
         public double SignificanceLevel;
 
@@ -40,8 +40,10 @@ namespace RandomProcess
             double xMin = Source.Bounds[0];
             double xMax = Source.Bounds.Last();
 
+            //поиск максимума разности между статистической и аналитической функцией распределения
             double result = 0;
-            for (double x = xMin; x < xMax; x += 0.01)
+            double step = (xMax - xMin) / 1000d;
+            for (double x = xMin; x < xMax; x += step)
             {
                 double Dn = Source.DistrFunc(x) - ((IDistrLaw)RandomProcess.Inst.Stochastic).DistributionFunc(x);
                 if (Dn > result)
@@ -50,7 +52,7 @@ namespace RandomProcess
             return result;
         }
 
-        public KolmogorovCrit(ProbCurves Src)
+        public CritKolmogorov(ProbCurves Src)
         {
             SignificanceLevel = 0.05;
             this.Source = Src;

@@ -1,6 +1,6 @@
 ﻿namespace RandomProcess
 {
-    partial class FormCheckResult
+    partial class FormHypResult
     {
         /// <summary>
         /// Required designer variable.

@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace RandomProcess
 {
-    public partial class FormModelingDistr : Form
+    public partial class FormModelingCF : Form
     {
         ProbCurves pc;
 
-        public FormModelingDistr()
+        public FormModelingCF()
         {
             InitializeComponent();
 
@@ -22,31 +22,28 @@ namespace RandomProcess
             DrawProbCurces();
         }
 
-
-        private string NumFormat(double num) {
+        private string NumFormat(double num)
+        {
             return String.Format("{0:0.######}", num);
         }
 
-        private void FillNumericChs() {
-            IDistrLaw dl = (IDistrLaw) RandomProcess.Inst.Stochastic;
+
+        private void FillNumericChs()
+        {
             NumericCharacteristic nc = new NumericCharacteristic();
 
             listViewChar.Items[0] = new ListViewItem(new string[] { "Mx",
-                NumFormat(nc.CalcMx()),
-                NumFormat(dl.CalcMx())});
+                NumFormat(nc.CalcMx())});
 
 
             listViewChar.Items[1] = new ListViewItem(new string[] { "Dx",
-                NumFormat(nc.CalcDx()),
-                NumFormat(dl.CalcDx())});
+                NumFormat(nc.CalcDx())});
 
             listViewChar.Items[2] = new ListViewItem(new string[] { "Ka",
-                NumFormat(nc.CalcKa()),
-                NumFormat(dl.CalcKa())});
+                NumFormat(nc.CalcKa())});
 
             listViewChar.Items[3] = new ListViewItem(new string[] { "Kε",
-                NumFormat(nc.CalcKe()),
-                NumFormat(dl.CalcKe())});
+                NumFormat(nc.CalcKe())});
         }
 
         private void DrawProbCurces()
@@ -63,14 +60,22 @@ namespace RandomProcess
 
         }
 
-        private void buttonAgo_Click(object sender, EventArgs e)
+        private void buttonBack_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void buttonComplete_Click(object sender, EventArgs e)
+        private void buttonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void buttonSaveArray_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialogSample.ShowDialog() == DialogResult.OK)
+            {
+                RandomProcess.Inst.ToFile(saveFileDialogSample.FileName);
+            }
         }
 
         private void buttonNewArray_Click(object sender, EventArgs e)
@@ -82,25 +87,11 @@ namespace RandomProcess
             }
         }
 
-        private void FormModelingDistr_FormClosed(object sender, FormClosedEventArgs e)
+        private void FormModelingCF_FormClosed(object sender, FormClosedEventArgs e)
         {
             //закрытие всего приложения по крестику в заголовке
             if (DialogResult == DialogResult.Cancel)
                 Application.Exit();
-        }
-
-        private void buttonSaveArray_Click(object sender, EventArgs e)
-        {
-            if(saveFileDialogSample.ShowDialog() == DialogResult.OK)
-            {
-                RandomProcess.Inst.ToFile(saveFileDialogSample.FileName);
-            }
-
-        }
-
-        private void buttonHypCheck_Click(object sender, EventArgs e)
-        {
-            (new FormHypCheck(pc)).ShowDialog();
         }
 
         private void panelCanvas_Paint(object sender, PaintEventArgs e)
@@ -125,7 +116,5 @@ namespace RandomProcess
             if (radioButtonCorrF.Checked)
                 DrawProbCurces();
         }
-
-
     }
 }

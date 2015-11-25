@@ -5,13 +5,29 @@ using System.Text;
 
 namespace RandomProcess
 {
-	public sealed class DecayingCF : ICorrFunc
+	public sealed class CFDecaying : ICorrFunc
 	{
 		public double A;
 
         public static Random rand = new Random();
 
         private double yn_1;
+
+        public double Dt
+        {
+            get
+            {
+                return 0.4 / A;
+            }
+        }
+
+        public int PointsAmount
+        {
+            get
+            {
+                return 8;
+            }
+        }
 
 		public double CorrFunc(double tau)
 		{
@@ -20,8 +36,7 @@ namespace RandomProcess
 
 		public double GetSample()
 		{
-            double dt = 0.4/A;
-            double y = A * dt;
+            double y = A * Dt;
             double p = Math.Exp(-1 * y);
             double a0 = Math.Sqrt(1-Math.Pow(p, 2));
             double b1 = p;
@@ -32,7 +47,7 @@ namespace RandomProcess
             return yn;
         }
 
-		public DecayingCF(double A)
+		public CFDecaying(double A)
 		{
             this.A = A;
             yn_1 = 0;
