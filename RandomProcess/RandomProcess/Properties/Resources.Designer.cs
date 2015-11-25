@@ -59,5 +59,15 @@ namespace RandomProcess.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logoPictureBox_Image {
+            get {
+                object obj = ResourceManager.GetObject("logoPictureBox.Image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
