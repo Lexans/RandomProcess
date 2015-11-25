@@ -24,6 +24,10 @@ namespace RandomProcess
         /// </summary>
         public int[] Freqs;
 
+        //цвета графиков оценки и аналитического
+        private Pen PenEstim = new Pen(Color.Black, 2);
+        private Pen PenAnalyt = new Pen(Color.Red, 2);
+
         /// <summary>
         /// рисует гистограмму
         /// </summary>
@@ -50,22 +54,30 @@ namespace RandomProcess
             double scaleX = Canvas.VisibleClipBounds.Width /
                 (xMax - xMin);
 
-            double hMax = h.Max() * 1.1;
+            double hMax = h.Max();
+
             //масштаб по y: пикс / ед
             double scaleY = Canvas.VisibleClipBounds.Height /
-                h.Max() * 0.9;
+                h.Max();
+
+
+            //смещение графика
+            xMin -= (xMax - xMin) * 0.1;
+            hMax += hMax * 0.1;
+            scaleX *= 0.8;
+            scaleY *= 0.9;
 
             //рисование аналитической функции плотности
             if (RandomProcess.Inst.Stochastic is IDistrLaw)
                 DrawFunc(((IDistrLaw)RandomProcess.Inst.Stochastic).DensityFunc,
-                scaleX, scaleY, xMin, hMax, new Pen(Color.Black, 2));
+                scaleX, scaleY, xMin, hMax, PenAnalyt);
 
 
             //отрисовка гистограммы
             for (int i = 0; i < nIntervals; i++)
             {
                 Canvas.DrawRectangle(
-                    new Pen(Color.Red, 1),
+                    PenEstim,
                     (float)(scaleX * (Bounds[i] - xMin)),
                     (float)(scaleY * (hMax - h[i])),
                     (float)(len * scaleX),
@@ -181,20 +193,24 @@ namespace RandomProcess
             for (int j = v; j >= 0; j--)
                 K[j] = K[j] / K[0];
 
-            string st = "";
-            foreach (double s in K)
-                st += s + "\t";
-            System.Windows.Forms.Clipboard.SetText(st);
-
             double topY = K.Max();
             double bottomY = K.Min();
             //масштаб: пикс/ед
             double scaleY = Canvas.VisibleClipBounds.Height / (topY - bottomY);
             double scaleX = Canvas.VisibleClipBounds.Width / (v * Dt);
 
-            //отрисовка
+            //смещение графика
+            topY *= 1.1;
+            scaleY *= 0.8;
+
+            //отрисовка аналитической КФ
             Canvas.Clear(Color.White);
 
+            if (RandomProcess.Inst.Stochastic is ICorrFunc)
+                DrawFunc(CF.CorrFunc,
+                    scaleX, scaleY, 0, topY, PenAnalyt);
+
+            //отрисовка оценки КФ
             float lastY = (float)(
                     (topY - K[0]) * scaleY);
             float lastX = 0;
@@ -205,17 +221,11 @@ namespace RandomProcess
                     (topY - K[j]) * scaleY);
                 float curX = (float)(j * Dt * scaleX);
 
-                Canvas.DrawLine(new Pen(Color.Black, 2), curX, curY, lastX, lastY);
+                Canvas.DrawLine(PenEstim, curX, curY, lastX, lastY);
 
                 lastY = curY;
                 lastX = curX;
             }
-
-            //отрисовка аналитической КФ
-            if (RandomProcess.Inst.Stochastic is ICorrFunc)
-                DrawFunc(CF.CorrFunc,
-                    scaleX, scaleY, 0, topY, new Pen(Color.Red, 1));
-
         }
 
         /// <summary>
@@ -235,18 +245,25 @@ namespace RandomProcess
             double scaleX = Canvas.VisibleClipBounds.Width /
                 (xMax - xMin);
 
-            double hMax = 1.1;
+            double hMax = 1;
             //масштаб по y: пикс / ед
             double scaleY = Canvas.VisibleClipBounds.Height /
-                1 * 0.9;
+                hMax;
 
+            //смещение графика
+            xMin -= (xMax - xMin) * 0.1;
+            hMax += hMax * 0.1;
+            scaleX *= 0.8;
+            scaleY *= 0.9;
+
+            //отрисовка аналитической ФР
             if (RandomProcess.Inst.Stochastic is IDistrLaw)
                 DrawFunc(((IDistrLaw)RandomProcess.Inst.Stochastic).DistributionFunc,
-                    scaleX, scaleY, xMin, hMax, new Pen(Color.Black, 2));
+                    scaleX, scaleY, xMin, hMax, PenAnalyt);
 
             //отрисовка оценки ФР
             DrawFunc(DistrFunc,
-                scaleX, scaleY, xMin, hMax, new Pen(Color.Red, 1));
+                scaleX, scaleY, xMin, hMax, PenEstim);
         }
 
         public double DistrFunc(double x)

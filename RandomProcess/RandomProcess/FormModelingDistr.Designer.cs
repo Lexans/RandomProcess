@@ -42,12 +42,12 @@
             this.columnHeaderChar = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderStatValue = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeaderAnalyt = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.panelCanvas = new System.Windows.Forms.Panel();
             this.buttonNewArray = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButtonCorrF = new System.Windows.Forms.RadioButton();
             this.saveFileDialogSample = new System.Windows.Forms.SaveFileDialog();
+            this.panelCanvas = new System.Windows.Forms.Panel();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -64,7 +64,7 @@
             // 
             // buttonComplete
             // 
-            this.buttonComplete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonComplete.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonComplete.Location = new System.Drawing.Point(386, 370);
             this.buttonComplete.Name = "buttonComplete";
             this.buttonComplete.Size = new System.Drawing.Size(105, 30);
@@ -75,7 +75,7 @@
             // 
             // buttonAgo
             // 
-            this.buttonAgo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAgo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonAgo.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonAgo.Location = new System.Drawing.Point(15, 370);
             this.buttonAgo.Name = "buttonAgo";
@@ -153,14 +153,6 @@
             this.columnHeaderAnalyt.Text = "Аналитические";
             this.columnHeaderAnalyt.Width = 173;
             // 
-            // panelCanvas
-            // 
-            this.panelCanvas.Location = new System.Drawing.Point(11, 31);
-            this.panelCanvas.Name = "panelCanvas";
-            this.panelCanvas.Size = new System.Drawing.Size(455, 252);
-            this.panelCanvas.TabIndex = 8;
-            this.panelCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCanvas_Paint);
-            // 
             // buttonNewArray
             // 
             this.buttonNewArray.Location = new System.Drawing.Point(150, 267);
@@ -212,6 +204,14 @@
             this.saveFileDialogSample.ShowHelp = true;
             this.saveFileDialogSample.Title = "Сохранение выборки в файл";
             // 
+            // panelCanvas
+            // 
+            this.panelCanvas.Location = new System.Drawing.Point(11, 31);
+            this.panelCanvas.Name = "panelCanvas";
+            this.panelCanvas.Size = new System.Drawing.Size(455, 252);
+            this.panelCanvas.TabIndex = 8;
+            this.panelCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCanvas_Paint);
+            // 
             // FormModelingDistr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -251,11 +251,11 @@
         private System.Windows.Forms.ColumnHeader columnHeaderChar;
         private System.Windows.Forms.ColumnHeader columnHeaderStatValue;
         private System.Windows.Forms.ColumnHeader columnHeaderAnalyt;
-        private System.Windows.Forms.Panel panelCanvas;
         private System.Windows.Forms.Button buttonNewArray;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButtonCorrF;
         private System.Windows.Forms.SaveFileDialog saveFileDialogSample;
+        private System.Windows.Forms.Panel panelCanvas;
     }
 }
