@@ -39,7 +39,7 @@
             // buttonOK
             // 
             this.buttonOK.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonOK.Location = new System.Drawing.Point(133, 155);
+            this.buttonOK.Location = new System.Drawing.Point(114, 152);
             this.buttonOK.Name = "buttonOK";
             this.buttonOK.Size = new System.Drawing.Size(83, 35);
             this.buttonOK.TabIndex = 0;
@@ -68,11 +68,11 @@
             // labelResult
             // 
             this.labelResult.AutoSize = true;
-            this.labelResult.Location = new System.Drawing.Point(130, 119);
+            this.labelResult.Location = new System.Drawing.Point(90, 116);
             this.labelResult.Name = "labelResult";
-            this.labelResult.Size = new System.Drawing.Size(86, 17);
+            this.labelResult.Size = new System.Drawing.Size(129, 17);
             this.labelResult.TabIndex = 4;
-            this.labelResult.Text = "\"Результат\"";
+            this.labelResult.Text = "Гипотеза принята";
             // 
             // textBoxStat
             // 
@@ -90,11 +90,11 @@
             this.textBoxCritPoint.Size = new System.Drawing.Size(131, 22);
             this.textBoxCritPoint.TabIndex = 7;
             // 
-            // FormCheckResult
+            // FormHypResult
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(340, 212);
+            this.ClientSize = new System.Drawing.Size(339, 198);
             this.Controls.Add(this.textBoxCritPoint);
             this.Controls.Add(this.textBoxStat);
             this.Controls.Add(this.labelResult);
@@ -105,7 +105,7 @@
             this.HelpButton = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FormCheckResult";
+            this.Name = "FormHypResult";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Результат проверки гипотезы";
             this.Load += new System.EventHandler(this.FormCheckResult_Load);

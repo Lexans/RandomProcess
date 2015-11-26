@@ -121,7 +121,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 27);
             this.button1.TabIndex = 8;
-            this.button1.Text = "Об авторах";
+            this.button1.Text = "О системе";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -141,6 +141,7 @@
             this.MinimizeBox = false;
             this.Name = "FormSelectMethod";
             this.Text = "Способ моделирования";
+            this.Activated += new System.EventHandler(this.FormSelectMethod_Activated);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownN)).EndInit();

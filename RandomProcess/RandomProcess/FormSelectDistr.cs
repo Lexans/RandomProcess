@@ -51,7 +51,7 @@ namespace RandomProcess
                     numericUpDownParam2.Visible = false;
 
                     numericUpDownParam1.Minimum = 0.01M;
-                    numericUpDownParam1.Maximum = 1;
+                    numericUpDownParam1.Maximum = 100;
                     numericUpDownParam1.Value = 1;
 
                     break;

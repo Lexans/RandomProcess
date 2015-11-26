@@ -32,11 +32,17 @@ namespace RandomProcess
                  if ((new FormSelectCF().ShowDialog(this)) == DialogResult.OK)
                     Show();
             }
+
+            numericUpDownN.Value = RandomProcess.Inst.N;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-           new FormAuthor().ShowDialog(this);
+           new FormAbout().ShowDialog(this);
+        }
+
+        private void FormSelectMethod_Activated(object sender, EventArgs e)
+        {
         }
 
 

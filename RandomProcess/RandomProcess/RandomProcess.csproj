@@ -68,11 +68,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormAuthor.cs">
+    <Compile Include="FormAbout.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAuthor.Designer.cs">
-      <DependentUpon>FormAuthor.cs</DependentUpon>
+    <Compile Include="FormAbout.Designer.cs">
+      <DependentUpon>FormAbout.cs</DependentUpon>
     </Compile>
     <Compile Include="FormSelectDistr.cs">
       <SubType>Form</SubType>
@@ -138,8 +138,8 @@
     <Compile Include="RandomProcess\CritPirson.cs" />
     <Compile Include="RandomProcess\ProbCurves.cs" />
     <Compile Include="RandomProcess\RandomProcess.cs" />
-    <EmbeddedResource Include="FormAuthor.resx">
-      <DependentUpon>FormAuthor.cs</DependentUpon>
+    <EmbeddedResource Include="FormAbout.resx">
+      <DependentUpon>FormAbout.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSelectDistr.resx">
       <DependentUpon>FormSelectDistr.cs</DependentUpon>

@@ -8,6 +8,12 @@ namespace RandomProcess
 {
     public delegate double FuncOfX(double X);
 
+	public delegate void DescriptGraph(
+        double XMin, double XMax,
+        double YMin, double YMax,
+        string YName, string XName
+    );
+
     public sealed class ProbCurves
     {
         /// <summary>
@@ -19,14 +25,17 @@ namespace RandomProcess
 
         public double[] Bounds;
 
+        //функция описания графика
+        public DescriptGraph DescriptFunc;
+
         /// <summary>
         /// частоты попадания в интервалы
         /// </summary>
         public int[] Freqs;
 
-        //цвета графиков оценки и аналитического
-        private Pen PenEstim = new Pen(Color.Black, 2);
-        private Pen PenAnalyt = new Pen(Color.Red, 2);
+        //цвета графиков оценки и аналитического 
+        private Pen PenEstim = new Pen(Color.FromArgb(180, Color.Blue), 2);
+        private Pen PenAnalyt = new Pen(Color.FromArgb(180, Color.Red), 2);
 
         /// <summary>
         /// рисует гистограмму
@@ -60,6 +69,8 @@ namespace RandomProcess
             double scaleY = Canvas.VisibleClipBounds.Height /
                 h.Max();
 
+            if (DescriptFunc != null)
+                DescriptFunc(xMin, xMax, 0, hMax, "f(x)", "x");
 
             //смещение графика
             xMin -= (xMax - xMin) * 0.1;
@@ -199,6 +210,9 @@ namespace RandomProcess
             double scaleY = Canvas.VisibleClipBounds.Height / (topY - bottomY);
             double scaleX = Canvas.VisibleClipBounds.Width / (v * Dt);
 
+            if (DescriptFunc != null)
+                DescriptFunc(0, v * Dt, bottomY, topY, "ρ(τ)", "τ");
+
             //смещение графика
             topY *= 1.1;
             scaleY *= 0.8;
@@ -249,6 +263,9 @@ namespace RandomProcess
             //масштаб по y: пикс / ед
             double scaleY = Canvas.VisibleClipBounds.Height /
                 hMax;
+
+            if (DescriptFunc != null)
+                DescriptFunc(xMin, xMax, 0, hMax, "F(x)", "x");
 
             //смещение графика
             xMin -= (xMax - xMin) * 0.1;

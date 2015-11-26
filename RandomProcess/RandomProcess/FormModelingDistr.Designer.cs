@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("MX");
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("DX");
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Ka");
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Kε");
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("MX");
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("DX");
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("Ka");
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("Kε");
             this.buttonHypCheck = new System.Windows.Forms.Button();
             this.buttonComplete = new System.Windows.Forms.Button();
             this.buttonAgo = new System.Windows.Forms.Button();
@@ -46,8 +46,17 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButtonCorrF = new System.Windows.Forms.RadioButton();
-            this.saveFileDialogSample = new System.Windows.Forms.SaveFileDialog();
             this.panelCanvas = new System.Windows.Forms.Panel();
+            this.saveFileDialogSample = new System.Windows.Forms.SaveFileDialog();
+            this.labelYmax = new System.Windows.Forms.Label();
+            this.labelYMin = new System.Windows.Forms.Label();
+            this.labelXMin = new System.Windows.Forms.Label();
+            this.labelXMax = new System.Windows.Forms.Label();
+            this.labelXName = new System.Windows.Forms.Label();
+            this.labelYName = new System.Windows.Forms.Label();
+            this.labelYAnalytMax = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelN = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +74,7 @@
             // buttonComplete
             // 
             this.buttonComplete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonComplete.Location = new System.Drawing.Point(386, 370);
+            this.buttonComplete.Location = new System.Drawing.Point(376, 377);
             this.buttonComplete.Name = "buttonComplete";
             this.buttonComplete.Size = new System.Drawing.Size(105, 30);
             this.buttonComplete.TabIndex = 14;
@@ -77,7 +86,7 @@
             // 
             this.buttonAgo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonAgo.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.buttonAgo.Location = new System.Drawing.Point(15, 370);
+            this.buttonAgo.Location = new System.Drawing.Point(2, 377);
             this.buttonAgo.Name = "buttonAgo";
             this.buttonAgo.Size = new System.Drawing.Size(117, 30);
             this.buttonAgo.TabIndex = 13;
@@ -98,7 +107,7 @@
             // radioButtonDistrFunction
             // 
             this.radioButtonDistrFunction.AutoSize = true;
-            this.radioButtonDistrFunction.Location = new System.Drawing.Point(11, 316);
+            this.radioButtonDistrFunction.Location = new System.Drawing.Point(11, 326);
             this.radioButtonDistrFunction.Name = "radioButtonDistrFunction";
             this.radioButtonDistrFunction.Size = new System.Drawing.Size(195, 21);
             this.radioButtonDistrFunction.TabIndex = 5;
@@ -110,7 +119,7 @@
             // 
             this.radioButtonDensity.AutoSize = true;
             this.radioButtonDensity.Checked = true;
-            this.radioButtonDensity.Location = new System.Drawing.Point(11, 289);
+            this.radioButtonDensity.Location = new System.Drawing.Point(11, 299);
             this.radioButtonDensity.Name = "radioButtonDensity";
             this.radioButtonDensity.Size = new System.Drawing.Size(99, 21);
             this.radioButtonDensity.TabIndex = 6;
@@ -127,10 +136,10 @@
             this.columnHeaderAnalyt});
             this.listViewChar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewChar.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3,
-            listViewItem4});
+            listViewItem5,
+            listViewItem6,
+            listViewItem7,
+            listViewItem8});
             this.listViewChar.Location = new System.Drawing.Point(3, 18);
             this.listViewChar.Name = "listViewChar";
             this.listViewChar.Size = new System.Drawing.Size(476, 156);
@@ -141,17 +150,17 @@
             // columnHeaderChar
             // 
             this.columnHeaderChar.Text = "Характеристика";
-            this.columnHeaderChar.Width = 122;
+            this.columnHeaderChar.Width = 121;
             // 
             // columnHeaderStatValue
             // 
-            this.columnHeaderStatValue.Text = "Статистические";
-            this.columnHeaderStatValue.Width = 174;
+            this.columnHeaderStatValue.Text = "Статистическая оценка";
+            this.columnHeaderStatValue.Width = 169;
             // 
             // columnHeaderAnalyt
             // 
-            this.columnHeaderAnalyt.Text = "Аналитические";
-            this.columnHeaderAnalyt.Width = 173;
+            this.columnHeaderAnalyt.Text = "Аналитическое значение";
+            this.columnHeaderAnalyt.Width = 182;
             // 
             // buttonNewArray
             // 
@@ -175,13 +184,22 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.labelN);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.labelYAnalytMax);
+            this.groupBox1.Controls.Add(this.labelYMin);
+            this.groupBox1.Controls.Add(this.labelYName);
+            this.groupBox1.Controls.Add(this.labelXName);
+            this.groupBox1.Controls.Add(this.labelXMax);
+            this.groupBox1.Controls.Add(this.labelXMin);
+            this.groupBox1.Controls.Add(this.labelYmax);
             this.groupBox1.Controls.Add(this.radioButtonCorrF);
             this.groupBox1.Controls.Add(this.radioButtonDistrFunction);
             this.groupBox1.Controls.Add(this.panelCanvas);
             this.groupBox1.Controls.Add(this.radioButtonDensity);
-            this.groupBox1.Location = new System.Drawing.Point(500, 19);
+            this.groupBox1.Location = new System.Drawing.Point(500, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(481, 388);
+            this.groupBox1.Size = new System.Drawing.Size(501, 395);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Вероятностные характеристики";
@@ -189,13 +207,21 @@
             // radioButtonCorrF
             // 
             this.radioButtonCorrF.AutoSize = true;
-            this.radioButtonCorrF.Location = new System.Drawing.Point(11, 343);
+            this.radioButtonCorrF.Location = new System.Drawing.Point(11, 353);
             this.radioButtonCorrF.Name = "radioButtonCorrF";
             this.radioButtonCorrF.Size = new System.Drawing.Size(203, 21);
             this.radioButtonCorrF.TabIndex = 9;
             this.radioButtonCorrF.Text = "Корреляционная функция";
             this.radioButtonCorrF.UseVisualStyleBackColor = true;
             this.radioButtonCorrF.CheckedChanged += new System.EventHandler(this.radioButtonCorrF_CheckedChanged);
+            // 
+            // panelCanvas
+            // 
+            this.panelCanvas.Location = new System.Drawing.Point(51, 33);
+            this.panelCanvas.Name = "panelCanvas";
+            this.panelCanvas.Size = new System.Drawing.Size(424, 234);
+            this.panelCanvas.TabIndex = 8;
+            this.panelCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCanvas_Paint);
             // 
             // saveFileDialogSample
             // 
@@ -204,19 +230,107 @@
             this.saveFileDialogSample.ShowHelp = true;
             this.saveFileDialogSample.Title = "Сохранение выборки в файл";
             // 
-            // panelCanvas
+            // labelYmax
             // 
-            this.panelCanvas.Location = new System.Drawing.Point(11, 31);
-            this.panelCanvas.Name = "panelCanvas";
-            this.panelCanvas.Size = new System.Drawing.Size(455, 252);
-            this.panelCanvas.TabIndex = 8;
-            this.panelCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCanvas_Paint);
+            this.labelYmax.AutoSize = true;
+            this.labelYmax.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelYmax.Location = new System.Drawing.Point(6, 44);
+            this.labelYmax.MinimumSize = new System.Drawing.Size(45, 0);
+            this.labelYmax.Name = "labelYmax";
+            this.labelYmax.Size = new System.Drawing.Size(45, 17);
+            this.labelYmax.TabIndex = 10;
+            this.labelYmax.Text = "0.0#";
+            this.labelYmax.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelYmax.Click += new System.EventHandler(this.labelYmax_Click);
+            // 
+            // labelYMin
+            // 
+            this.labelYMin.AutoSize = true;
+            this.labelYMin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelYMin.Location = new System.Drawing.Point(6, 250);
+            this.labelYMin.MinimumSize = new System.Drawing.Size(45, 0);
+            this.labelYMin.Name = "labelYMin";
+            this.labelYMin.Size = new System.Drawing.Size(45, 17);
+            this.labelYMin.TabIndex = 11;
+            this.labelYMin.Text = "0.0#";
+            this.labelYMin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelXMin
+            // 
+            this.labelXMin.AutoSize = true;
+            this.labelXMin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelXMin.Location = new System.Drawing.Point(52, 271);
+            this.labelXMin.MinimumSize = new System.Drawing.Size(45, 0);
+            this.labelXMin.Name = "labelXMin";
+            this.labelXMin.Size = new System.Drawing.Size(60, 17);
+            this.labelXMin.TabIndex = 12;
+            this.labelXMin.Text = "___0.0#";
+            this.labelXMin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelXMax
+            // 
+            this.labelXMax.AutoSize = true;
+            this.labelXMax.Location = new System.Drawing.Point(415, 270);
+            this.labelXMax.MinimumSize = new System.Drawing.Size(60, 0);
+            this.labelXMax.Name = "labelXMax";
+            this.labelXMax.Size = new System.Drawing.Size(60, 17);
+            this.labelXMax.TabIndex = 13;
+            this.labelXMax.Text = "0.0#___";
+            this.labelXMax.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelXName
+            // 
+            this.labelXName.AutoSize = true;
+            this.labelXName.Location = new System.Drawing.Point(481, 250);
+            this.labelXName.Name = "labelXName";
+            this.labelXName.Size = new System.Drawing.Size(14, 17);
+            this.labelXName.TabIndex = 0;
+            this.labelXName.Text = "x";
+            // 
+            // labelYName
+            // 
+            this.labelYName.AutoSize = true;
+            this.labelYName.Location = new System.Drawing.Point(25, 23);
+            this.labelYName.Name = "labelYName";
+            this.labelYName.Size = new System.Drawing.Size(28, 17);
+            this.labelYName.TabIndex = 14;
+            this.labelYName.Text = "f(x)";
+            // 
+            // labelYAnalytMax
+            // 
+            this.labelYAnalytMax.AutoSize = true;
+            this.labelYAnalytMax.Location = new System.Drawing.Point(6, 70);
+            this.labelYAnalytMax.MinimumSize = new System.Drawing.Size(45, 0);
+            this.labelYAnalytMax.Name = "labelYAnalytMax";
+            this.labelYAnalytMax.Size = new System.Drawing.Size(45, 17);
+            this.labelYAnalytMax.TabIndex = 15;
+            this.labelYAnalytMax.Text = "0.0#";
+            this.labelYAnalytMax.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(277, 301);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(117, 17);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Объём выборки:";
+            // 
+            // labelN
+            // 
+            this.labelN.AutoSize = true;
+            this.labelN.Location = new System.Drawing.Point(396, 302);
+            this.labelN.Name = "labelN";
+            this.labelN.Size = new System.Drawing.Size(48, 17);
+            this.labelN.TabIndex = 17;
+            this.labelN.Text = "00000";
+            this.labelN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // FormModelingDistr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(993, 412);
+            this.ClientSize = new System.Drawing.Size(1007, 419);
             this.Controls.Add(this.buttonComplete);
             this.Controls.Add(this.buttonAgo);
             this.Controls.Add(this.buttonSaveArray);
@@ -257,5 +371,14 @@
         private System.Windows.Forms.RadioButton radioButtonCorrF;
         private System.Windows.Forms.SaveFileDialog saveFileDialogSample;
         private System.Windows.Forms.Panel panelCanvas;
+        private System.Windows.Forms.Label labelYName;
+        private System.Windows.Forms.Label labelXName;
+        private System.Windows.Forms.Label labelXMax;
+        private System.Windows.Forms.Label labelXMin;
+        private System.Windows.Forms.Label labelYMin;
+        private System.Windows.Forms.Label labelYmax;
+        private System.Windows.Forms.Label labelYAnalytMax;
+        private System.Windows.Forms.Label labelN;
+        private System.Windows.Forms.Label label1;
     }
 }
