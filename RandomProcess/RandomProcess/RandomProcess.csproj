@@ -133,10 +133,10 @@
     <Compile Include="RandomProcess\IDistrLaw.cs" />
     <Compile Include="RandomProcess\IModeling.cs" />
     <Compile Include="RandomProcess\CritKolmogorov.cs" />
-    <Compile Include="RandomProcess\NumericCharacteristic.cs" />
+    <Compile Include="RandomProcess\CharactNumeric.cs" />
     <Compile Include="RandomProcess\CFOscillatory.cs" />
     <Compile Include="RandomProcess\CritPirson.cs" />
-    <Compile Include="RandomProcess\ProbCurves.cs" />
+    <Compile Include="RandomProcess\CharactProb.cs" />
     <Compile Include="RandomProcess\RandomProcess.cs" />
     <EmbeddedResource Include="FormAbout.resx">
       <DependentUpon>FormAbout.cs</DependentUpon>

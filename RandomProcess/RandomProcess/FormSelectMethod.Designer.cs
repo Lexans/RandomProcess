@@ -141,6 +141,7 @@
             this.MinimizeBox = false;
             this.Name = "FormSelectMethod";
             this.Text = "Способ моделирования";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.FormSelectMethod_HelpButtonClicked);
             this.Activated += new System.EventHandler(this.FormSelectMethod_Activated);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

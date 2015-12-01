@@ -125,16 +125,6 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <undefinedType
-        Id="c8b97e83-e757-4dd4-a953-786fbae8e662"
-        name="ModelingProject1::System::Double" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <undefinedType
-        Id="8222d6c9-3257-4c00-9d7b-8793a7cb09ec"
-        name="ModelingProject1::System::Random" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <undefinedType
         Id="34ca4c37-88e2-4744-9d91-b1bae643b591"
         name="ModelingProject1::System::UInt32" />
     </packageHasNamedElement>
@@ -172,6 +162,24 @@
       <undefinedType
         Id="7803594e-2a8a-474d-a6c6-1b67bf964340"
         name="int[]" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="2077cd4e-8b45-42e0-b89f-915d3bacfa4e"
+        LastKnownName="System"
+        LastKnownLocation="Package_1705.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="a3a7d6df-d482-4aa9-bc42-c8a2c3d23ebd"
+        LastKnownName="RandomProcess"
+        LastKnownLocation="Package1_1705.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="6c4b9525-9ada-4b34-9ff8-8c41476a09fe"
+        LastKnownName="RandomProcess"
+        LastKnownLocation="Package_1708.uml" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

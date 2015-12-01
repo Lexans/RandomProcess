@@ -14,7 +14,7 @@ namespace RandomProcess
         string YName, string XName
     );
 
-    public sealed class ProbCurves
+    public sealed class CharactProb
     {
         /// <summary>
         /// количество интервалов разбиения
@@ -291,7 +291,7 @@ namespace RandomProcess
             return 1d / N * X.Count((xi) => xi < x);
         }
 
-        public ProbCurves()
+        public CharactProb()
         {
             SplitSample();
         }

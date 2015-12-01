@@ -9,7 +9,7 @@ namespace RandomProcess
 	{
         public double SignificanceLevel;
 
-        public ProbCurves Source;
+        public CharactProb Source;
 
 		public bool CheckCriterion(out double CritPoint, out double Statistic)
 		{
@@ -56,7 +56,7 @@ namespace RandomProcess
             return result;
 		}
 
-		public CritPirson(ProbCurves Src)
+		public CritPirson(CharactProb Src)
 		{
             SignificanceLevel = 0.05;
             this.Source = Src;

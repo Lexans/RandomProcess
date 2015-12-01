@@ -5,7 +5,7 @@ using System.Text;
 
 namespace RandomProcess
 {
-	public sealed class NumericCharacteristic
+	public sealed class CharactNumeric
 	{
         double[] X;
         int N;
@@ -47,7 +47,7 @@ namespace RandomProcess
                 (1d / N  * X.Sum((xi) => Math.Pow((xi - MX), 3)))/(Math.Pow(DX, 3d/2));
 		}
 
-		public NumericCharacteristic()
+		public CharactNumeric()
 		{
             X = RandomProcess.Inst.Sample;
             N = RandomProcess.Inst.N;

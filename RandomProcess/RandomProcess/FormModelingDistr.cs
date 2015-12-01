@@ -12,7 +12,7 @@ namespace RandomProcess
 {
     public partial class FormModelingDistr : Form
     {
-        ProbCurves pc;
+        CharactProb pc;
 
         public FormModelingDistr()
         {
@@ -39,7 +39,7 @@ namespace RandomProcess
 
         private void FillNumericChs() {
             IDistrLaw dl = (IDistrLaw) RandomProcess.Inst.Stochastic;
-            NumericCharacteristic nc = new NumericCharacteristic();
+            CharactNumeric nc = new CharactNumeric();
 
             labelN.Text = RandomProcess.Inst.N.ToString();
 
@@ -102,7 +102,7 @@ namespace RandomProcess
 
         private void DrawProbCurces()
         {
-            pc = new ProbCurves();
+            pc = new CharactProb();
             pc.Canvas = panelCanvas.CreateGraphics();
             pc.DescriptFunc += DescriptGraph;
 

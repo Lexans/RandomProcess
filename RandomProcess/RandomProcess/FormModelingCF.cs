@@ -12,7 +12,7 @@ namespace RandomProcess
 {
     public partial class FormModelingCF : Form
     {
-        ProbCurves pc;
+        CharactProb pc;
 
         public FormModelingCF()
         {
@@ -43,7 +43,7 @@ namespace RandomProcess
         {
             labelN.Text = RandomProcess.Inst.N.ToString();
 
-            NumericCharacteristic nc = new NumericCharacteristic();
+            CharactNumeric nc = new CharactNumeric();
 
             listViewChar.Items[0] = new ListViewItem(new string[] { "Mx",
                 NumFormat(nc.CalcMx(), 6)});
@@ -83,7 +83,7 @@ namespace RandomProcess
 
         private void DrawProbCurces()
         {
-            pc = new ProbCurves();
+            pc = new CharactProb();
             pc.Canvas = panelCanvas.CreateGraphics();
             pc.DescriptFunc += DescriptGraph;
 

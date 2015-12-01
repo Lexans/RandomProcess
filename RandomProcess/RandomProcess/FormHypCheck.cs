@@ -12,9 +12,9 @@ namespace RandomProcess
 {
     public partial class FormHypCheck : Form
     {
-        ProbCurves pc;
+        CharactProb pc;
 
-        public FormHypCheck(ProbCurves pc) : this()
+        public FormHypCheck(CharactProb pc) : this()
         {
             this.pc = pc;
         }
