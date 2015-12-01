@@ -89,7 +89,7 @@
             this.button1.Text = "Отмена";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // FormRegen
+            // FormResample
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -102,9 +102,10 @@
             this.HelpButton = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FormRegen";
+            this.Name = "FormResample";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Генерация новой выборки";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.FormResample_HelpButtonClicked);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownNewValue)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -68,5 +68,10 @@ namespace RandomProcess
                     break;
             }
         }
+
+        private void FormSelectCF_HelpButtonClicked(object sender, CancelEventArgs e)
+        {
+            Program.ShowHelp();
+        }
     }
 }

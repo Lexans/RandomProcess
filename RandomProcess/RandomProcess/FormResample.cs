@@ -23,5 +23,10 @@ namespace RandomProcess
             RandomProcess.Inst.N = (int)numericUpDownNewValue.Value;
             RandomProcess.Inst.Generate();
         }
+
+        private void FormResample_HelpButtonClicked(object sender, CancelEventArgs e)
+        {
+            Program.ShowHelp();
+        }
     }
 }

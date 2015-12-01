@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("MX");
-            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem("DX");
-            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem("Ka");
-            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem("Kε");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("MX");
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("DX");
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("Ka");
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("Kε");
             this.buttonHypCheck = new System.Windows.Forms.Button();
             this.buttonComplete = new System.Windows.Forms.Button();
             this.buttonAgo = new System.Windows.Forms.Button();
@@ -45,18 +45,18 @@
             this.buttonNewArray = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labelN = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.labelYAnalytMax = new System.Windows.Forms.Label();
+            this.labelYMin = new System.Windows.Forms.Label();
+            this.labelYName = new System.Windows.Forms.Label();
+            this.labelXName = new System.Windows.Forms.Label();
+            this.labelXMax = new System.Windows.Forms.Label();
+            this.labelXMin = new System.Windows.Forms.Label();
+            this.labelYmax = new System.Windows.Forms.Label();
             this.radioButtonCorrF = new System.Windows.Forms.RadioButton();
             this.panelCanvas = new System.Windows.Forms.Panel();
             this.saveFileDialogSample = new System.Windows.Forms.SaveFileDialog();
-            this.labelYmax = new System.Windows.Forms.Label();
-            this.labelYMin = new System.Windows.Forms.Label();
-            this.labelXMin = new System.Windows.Forms.Label();
-            this.labelXMax = new System.Windows.Forms.Label();
-            this.labelXName = new System.Windows.Forms.Label();
-            this.labelYName = new System.Windows.Forms.Label();
-            this.labelYAnalytMax = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.labelN = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -136,10 +136,10 @@
             this.columnHeaderAnalyt});
             this.listViewChar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewChar.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem5,
-            listViewItem6,
-            listViewItem7,
-            listViewItem8});
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4});
             this.listViewChar.Location = new System.Drawing.Point(3, 18);
             this.listViewChar.Name = "listViewChar";
             this.listViewChar.Size = new System.Drawing.Size(476, 156);
@@ -204,6 +204,102 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Вероятностные характеристики";
             // 
+            // labelN
+            // 
+            this.labelN.AutoSize = true;
+            this.labelN.Location = new System.Drawing.Point(396, 302);
+            this.labelN.Name = "labelN";
+            this.labelN.Size = new System.Drawing.Size(48, 17);
+            this.labelN.TabIndex = 17;
+            this.labelN.Text = "00000";
+            this.labelN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(277, 301);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(117, 17);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Объём выборки:";
+            // 
+            // labelYAnalytMax
+            // 
+            this.labelYAnalytMax.AutoSize = true;
+            this.labelYAnalytMax.Location = new System.Drawing.Point(6, 70);
+            this.labelYAnalytMax.MinimumSize = new System.Drawing.Size(45, 0);
+            this.labelYAnalytMax.Name = "labelYAnalytMax";
+            this.labelYAnalytMax.Size = new System.Drawing.Size(45, 17);
+            this.labelYAnalytMax.TabIndex = 15;
+            this.labelYAnalytMax.Text = "0.0#";
+            this.labelYAnalytMax.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelYMin
+            // 
+            this.labelYMin.AutoSize = true;
+            this.labelYMin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelYMin.Location = new System.Drawing.Point(6, 250);
+            this.labelYMin.MinimumSize = new System.Drawing.Size(45, 0);
+            this.labelYMin.Name = "labelYMin";
+            this.labelYMin.Size = new System.Drawing.Size(45, 17);
+            this.labelYMin.TabIndex = 11;
+            this.labelYMin.Text = "0.0#";
+            this.labelYMin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelYName
+            // 
+            this.labelYName.AutoSize = true;
+            this.labelYName.Location = new System.Drawing.Point(25, 23);
+            this.labelYName.Name = "labelYName";
+            this.labelYName.Size = new System.Drawing.Size(28, 17);
+            this.labelYName.TabIndex = 14;
+            this.labelYName.Text = "f(x)";
+            // 
+            // labelXName
+            // 
+            this.labelXName.AutoSize = true;
+            this.labelXName.Location = new System.Drawing.Point(481, 250);
+            this.labelXName.Name = "labelXName";
+            this.labelXName.Size = new System.Drawing.Size(14, 17);
+            this.labelXName.TabIndex = 0;
+            this.labelXName.Text = "x";
+            // 
+            // labelXMax
+            // 
+            this.labelXMax.AutoSize = true;
+            this.labelXMax.Location = new System.Drawing.Point(415, 270);
+            this.labelXMax.MinimumSize = new System.Drawing.Size(60, 0);
+            this.labelXMax.Name = "labelXMax";
+            this.labelXMax.Size = new System.Drawing.Size(60, 17);
+            this.labelXMax.TabIndex = 13;
+            this.labelXMax.Text = "0.0#___";
+            this.labelXMax.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // labelXMin
+            // 
+            this.labelXMin.AutoSize = true;
+            this.labelXMin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelXMin.Location = new System.Drawing.Point(52, 271);
+            this.labelXMin.MinimumSize = new System.Drawing.Size(45, 0);
+            this.labelXMin.Name = "labelXMin";
+            this.labelXMin.Size = new System.Drawing.Size(60, 17);
+            this.labelXMin.TabIndex = 12;
+            this.labelXMin.Text = "___0.0#";
+            this.labelXMin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // labelYmax
+            // 
+            this.labelYmax.AutoSize = true;
+            this.labelYmax.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelYmax.Location = new System.Drawing.Point(6, 44);
+            this.labelYmax.MinimumSize = new System.Drawing.Size(45, 0);
+            this.labelYmax.Name = "labelYmax";
+            this.labelYmax.Size = new System.Drawing.Size(45, 17);
+            this.labelYmax.TabIndex = 10;
+            this.labelYmax.Text = "0.0#";
+            this.labelYmax.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.labelYmax.Click += new System.EventHandler(this.labelYmax_Click);
+            // 
             // radioButtonCorrF
             // 
             this.radioButtonCorrF.AutoSize = true;
@@ -230,102 +326,6 @@
             this.saveFileDialogSample.ShowHelp = true;
             this.saveFileDialogSample.Title = "Сохранение выборки в файл";
             // 
-            // labelYmax
-            // 
-            this.labelYmax.AutoSize = true;
-            this.labelYmax.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.labelYmax.Location = new System.Drawing.Point(6, 44);
-            this.labelYmax.MinimumSize = new System.Drawing.Size(45, 0);
-            this.labelYmax.Name = "labelYmax";
-            this.labelYmax.Size = new System.Drawing.Size(45, 17);
-            this.labelYmax.TabIndex = 10;
-            this.labelYmax.Text = "0.0#";
-            this.labelYmax.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.labelYmax.Click += new System.EventHandler(this.labelYmax_Click);
-            // 
-            // labelYMin
-            // 
-            this.labelYMin.AutoSize = true;
-            this.labelYMin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.labelYMin.Location = new System.Drawing.Point(6, 250);
-            this.labelYMin.MinimumSize = new System.Drawing.Size(45, 0);
-            this.labelYMin.Name = "labelYMin";
-            this.labelYMin.Size = new System.Drawing.Size(45, 17);
-            this.labelYMin.TabIndex = 11;
-            this.labelYMin.Text = "0.0#";
-            this.labelYMin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labelXMin
-            // 
-            this.labelXMin.AutoSize = true;
-            this.labelXMin.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.labelXMin.Location = new System.Drawing.Point(52, 271);
-            this.labelXMin.MinimumSize = new System.Drawing.Size(45, 0);
-            this.labelXMin.Name = "labelXMin";
-            this.labelXMin.Size = new System.Drawing.Size(60, 17);
-            this.labelXMin.TabIndex = 12;
-            this.labelXMin.Text = "___0.0#";
-            this.labelXMin.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // labelXMax
-            // 
-            this.labelXMax.AutoSize = true;
-            this.labelXMax.Location = new System.Drawing.Point(415, 270);
-            this.labelXMax.MinimumSize = new System.Drawing.Size(60, 0);
-            this.labelXMax.Name = "labelXMax";
-            this.labelXMax.Size = new System.Drawing.Size(60, 17);
-            this.labelXMax.TabIndex = 13;
-            this.labelXMax.Text = "0.0#___";
-            this.labelXMax.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // labelXName
-            // 
-            this.labelXName.AutoSize = true;
-            this.labelXName.Location = new System.Drawing.Point(481, 250);
-            this.labelXName.Name = "labelXName";
-            this.labelXName.Size = new System.Drawing.Size(14, 17);
-            this.labelXName.TabIndex = 0;
-            this.labelXName.Text = "x";
-            // 
-            // labelYName
-            // 
-            this.labelYName.AutoSize = true;
-            this.labelYName.Location = new System.Drawing.Point(25, 23);
-            this.labelYName.Name = "labelYName";
-            this.labelYName.Size = new System.Drawing.Size(28, 17);
-            this.labelYName.TabIndex = 14;
-            this.labelYName.Text = "f(x)";
-            // 
-            // labelYAnalytMax
-            // 
-            this.labelYAnalytMax.AutoSize = true;
-            this.labelYAnalytMax.Location = new System.Drawing.Point(6, 70);
-            this.labelYAnalytMax.MinimumSize = new System.Drawing.Size(45, 0);
-            this.labelYAnalytMax.Name = "labelYAnalytMax";
-            this.labelYAnalytMax.Size = new System.Drawing.Size(45, 17);
-            this.labelYAnalytMax.TabIndex = 15;
-            this.labelYAnalytMax.Text = "0.0#";
-            this.labelYAnalytMax.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(277, 301);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 17);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Объём выборки:";
-            // 
-            // labelN
-            // 
-            this.labelN.AutoSize = true;
-            this.labelN.Location = new System.Drawing.Point(396, 302);
-            this.labelN.Name = "labelN";
-            this.labelN.Size = new System.Drawing.Size(48, 17);
-            this.labelN.TabIndex = 17;
-            this.labelN.Text = "00000";
-            this.labelN.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // FormModelingDistr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -345,6 +345,7 @@
             this.Name = "FormModelingDistr";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Результаты моделирования";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.FormModelingDistr_HelpButtonClicked);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormModelingDistr_FormClosed);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);

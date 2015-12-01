@@ -143,6 +143,7 @@
             this.Text = "Способ моделирования";
             this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.FormSelectMethod_HelpButtonClicked);
             this.Activated += new System.EventHandler(this.FormSelectMethod_Activated);
+            this.Load += new System.EventHandler(this.FormSelectMethod_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownN)).EndInit();

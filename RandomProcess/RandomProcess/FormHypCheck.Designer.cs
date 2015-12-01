@@ -133,6 +133,7 @@
             this.Name = "FormHypCheck";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Проверка гипотезы";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.FormHypCheck_HelpButtonClicked);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

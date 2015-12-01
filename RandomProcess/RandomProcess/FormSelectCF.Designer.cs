@@ -166,6 +166,7 @@
             this.Name = "FormSelectCF";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Корреляционная функция";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.FormSelectCF_HelpButtonClicked);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownParam2)).EndInit();

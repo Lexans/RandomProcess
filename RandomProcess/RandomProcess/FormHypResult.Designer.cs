@@ -108,6 +108,7 @@
             this.Name = "FormHypResult";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Результат проверки гипотезы";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.FormHypResult_HelpButtonClicked);
             this.Load += new System.EventHandler(this.FormCheckResult_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

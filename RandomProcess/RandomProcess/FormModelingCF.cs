@@ -158,5 +158,10 @@ namespace RandomProcess
             DrawProbCurces();
 
         }
+
+        private void FormModelingCF_HelpButtonClicked(object sender, CancelEventArgs e)
+        {
+            Program.ShowHelp();
+        }
     }
 }

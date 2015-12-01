@@ -47,7 +47,12 @@ namespace RandomProcess
 
         private void FormSelectMethod_HelpButtonClicked(object sender, CancelEventArgs e)
         {
-            MessageBox.Show(this, "Отсутствует файл справки", "Ошибка при открытии справки", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            Program.ShowHelp();
+        }
+
+        private void FormSelectMethod_Load(object sender, EventArgs e)
+        {
+
         }
 
 

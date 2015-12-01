@@ -52,5 +52,10 @@ namespace RandomProcess
         {
             Close();
         }
+
+        private void FormHypResult_HelpButtonClicked(object sender, CancelEventArgs e)
+        {
+            Program.ShowHelp();
+        }
     }
 }

@@ -137,7 +137,7 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Параметры";
             // 
-            // FormDistrLaw
+            // FormSelectDistr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -150,9 +150,10 @@
             this.HelpButton = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FormDistrLaw";
+            this.Name = "FormSelectDistr";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Закон распределения";
+            this.HelpButtonClicked += new System.ComponentModel.CancelEventHandler(this.FormSelectDistr_HelpButtonClicked);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormDistrLaw_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownParam1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownParam2)).EndInit();

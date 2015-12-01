@@ -183,6 +183,11 @@ namespace RandomProcess
 
         }
 
+        private void FormModelingDistr_HelpButtonClicked(object sender, CancelEventArgs e)
+        {
+            Program.ShowHelp();
+        }
+
 
     }
 }
